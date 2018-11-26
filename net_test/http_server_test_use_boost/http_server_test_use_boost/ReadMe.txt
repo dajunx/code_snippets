@@ -1,2 +1,0 @@
-192.168.1.2
-J:\github_test\net_test\http_server_test_use_boost\http_server_test_use_boost
