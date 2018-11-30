@@ -261,167 +261,8 @@
     <ClCompile Include="cpp_design\SimpleFactoryPatternDemo.cpp">
       <Filter>normal_cplusplus\design</Filter>
     </ClCompile>
-    <ClCompile Include="boost_normal\filesystem_copy_file_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\filesystem_create_rm_parse_file.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\filesystem_path_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\filesystem_read_write_content_2_file.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\filesystem_savefile_del_oldfile.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\functio_return_value_life_cycle.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\function_bypass_parameter_usage.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\function_lib_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\header_content_staticfun_included_by_multicpp_err.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\io_service_common_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\io_service_run_inline_thread.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\judge_task_io_service_reactor_type.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\linux_get_file_property.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\multi_index_add_up_view.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\print_thread_id_code_spipet.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\property_tree_rw_ini_file.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\property_tree_write_read_json.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\ptime_detail_ymdhms.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\replace_all_non_chinese_chs.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\shared_ptr_cyclic_references.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\shared_ptr_use_count_in_multiuse_method.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\steady_clock_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\steady_timer_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\string_algo_snippet.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\tuple_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\unified_com_client_M_test_stopfun_count.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\use_io_service_wrap.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\wrap_usage.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\a_web_weak_ptr_header.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\atomic_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\bind_life_cycle_example.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\bind_stl_fun.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\bind_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\boost_example_01.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\boost_function_bind_mixed_usage.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\boost_multi_index_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\boost_random.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\calculate_fun_duration_time.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\cancle_steady_timer.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\coroutine_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\cpp_virtual_fun_post_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_network\asio_udp_server.cpp">
-      <Filter>boost\network</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_network\async_tcp_service0.cpp">
-      <Filter>boost\network</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_network\async_tcp_service1.cpp">
-      <Filter>boost\network</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_network\ipv6_test.cpp">
-      <Filter>boost\network</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_network\sync_tcp_client.cpp">
-      <Filter>boost\network</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_network\asio_udp_client.cpp">
-      <Filter>boost\network</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_multi_thread\thread_local_data_save.cpp">
-      <Filter>boost\multiple_thread</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_multi_thread\thread_mutex.cpp">
-      <Filter>boost\multiple_thread</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_multi_thread\once_outine_test.cpp">
-      <Filter>boost\multiple_thread</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_multi_thread\thread_condition_test.cpp">
-      <Filter>boost\multiple_thread</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\cpp_fun_para_not_in_order.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
     <ClCompile Include="others\rapidjson_test.cpp">
       <Filter>others</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\string_split_test.cpp">
-      <Filter>boost\boost</Filter>
     </ClCompile>
     <ClCompile Include="thread_win\simple_thread_create_close.cpp">
       <Filter>normal_cplusplus\thread_win</Filter>
@@ -437,9 +278,6 @@
     </ClCompile>
     <ClCompile Include="thread_win\thread_semaphore.cpp">
       <Filter>normal_cplusplus\thread_win</Filter>
-    </ClCompile>
-    <ClCompile Include="boost_normal\array_test.cpp">
-      <Filter>boost\boost</Filter>
     </ClCompile>
     <ClCompile Include="cpp_normal\twoFileContentsMerge.cpp">
       <Filter>normal_cplusplus\cplusplus</Filter>
@@ -528,14 +366,107 @@
     <ClCompile Include="3rd\GoogleProtoSerialize\SerializeProtoBufTest.cpp">
       <Filter>normal_cplusplus\3rd\GoogleProtoSerialize</Filter>
     </ClCompile>
-    <ClCompile Include="boost_normal\parse_string.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
     <ClCompile Include="3rd\protobuf_test\lm.helloworld.pb.cc">
       <Filter>normal_cplusplus\3rd\protobuf_test</Filter>
     </ClCompile>
     <ClCompile Include="3rd\protobuf_test\main.cpp">
       <Filter>normal_cplusplus\3rd\protobuf_test</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\filesystem_create_rm_parse_file.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\filesystem_path_test.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\filesystem_read_write_content_2_file.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\filesystem_savefile_del_oldfile.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\functio_return_value_life_cycle.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\function_bypass_parameter_usage.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\linux_get_file_property.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\multi_index_add_up_view.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\property_tree_rw_ini_file.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\property_tree_write_read_json.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\ptime_detail_ymdhms.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\replace_all_non_chinese_chs.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\shared_ptr_cyclic_references.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\shared_ptr_use_count_in_multiuse_method.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\steady_clock_test.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\unified_com_client_M_test_stopfun_count.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\use_io_service_wrap.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\wrap_usage.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_multi_thread\once_outine_test.cpp">
+      <Filter>boost\multiple_thread</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_multi_thread\thread_condition_test.cpp">
+      <Filter>boost\multiple_thread</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_multi_thread\thread_local_data_save.cpp">
+      <Filter>boost\multiple_thread</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_multi_thread\thread_mutex.cpp">
+      <Filter>boost\multiple_thread</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_network\async_tcp_service0.cpp">
+      <Filter>boost\network</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_network\async_tcp_service1.cpp">
+      <Filter>boost\network</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_network\ipv6_test.cpp">
+      <Filter>boost\network</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_network\sync_tcp_client.cpp">
+      <Filter>boost\network</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_network\asio_udp_client.cpp">
+      <Filter>boost\network</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_network\asio_udp_server.cpp">
+      <Filter>boost\network</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\string_algo.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\string_split.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="boost\boost_normal\tuple.cpp">
+      <Filter>boost\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp_normal\fun_para_not_in_order.cpp">
+      <Filter>normal_cplusplus\cplusplus</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -547,6 +478,69 @@
     </ClInclude>
     <ClInclude Include="3rd\protobuf_test\lm.helloworld.pb.h">
       <Filter>normal_cplusplus\3rd\protobuf_test</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_common.h">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\a_web_weak_ptr_header.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\array.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\atomic.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\bind_life_cycle.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\bind_stl_fun.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\bind_and_function.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\boost_function_bind_mixed_usage.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\boost_multi_index_test.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\boost_and_normal_random.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\calculate_fun_duration_time.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\steady_timer.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\cancle_steady_timer.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\coroutine.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\virtual_fun_post_test.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\filesystem_copy_file.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\function_lib.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\io_service_simple_test.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\judge_task_io_service_reactor_type.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\tokenizer_lib_test.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\print_thread_id.h">
+      <Filter>boost\boost</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
