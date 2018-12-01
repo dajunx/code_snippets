@@ -104,6 +104,7 @@
     <ClInclude Include="boost\boost_normal\calculate_fun_duration_time.h" />
     <ClInclude Include="boost\boost_normal\cancle_steady_timer.h" />
     <ClInclude Include="boost\boost_normal\coroutine.h" />
+    <ClInclude Include="boost\boost_normal\ptime_test.h" />
     <ClInclude Include="boost\boost_normal\virtual_fun_post_test.h" />
     <ClInclude Include="boost\boost_normal\filesystem_copy_file.h" />
     <ClCompile Include="boost\boost_normal\filesystem_create_rm_parse_file.cpp" />
@@ -121,10 +122,11 @@
     <ClInclude Include="boost\boost_normal\print_thread_id.h" />
     <ClCompile Include="boost\boost_normal\property_tree_rw_ini_file.cpp" />
     <ClCompile Include="boost\boost_normal\property_tree_write_read_json.cpp" />
-    <ClCompile Include="boost\boost_normal\ptime_detail_ymdhms.cpp" />
-    <ClCompile Include="boost\boost_normal\replace_all_non_chinese_chs.cpp" />
-    <ClCompile Include="boost\boost_normal\shared_ptr_cyclic_references.cpp" />
-    <ClCompile Include="boost\boost_normal\shared_ptr_use_count_in_multiuse_method.cpp" />
+    <ClInclude Include="boost\boost_normal\regex_test.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\shared_ptr_cyclic_references.h" />
+    <ClInclude Include="boost\boost_normal\shared_ptr_use_count_change_test.h" />
     <ClCompile Include="boost\boost_normal\steady_clock_test.cpp" />
     <ClInclude Include="boost\boost_normal\steady_timer.h" />
     <ClCompile Include="boost\boost_normal\string_algo.cpp" />

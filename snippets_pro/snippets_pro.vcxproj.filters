@@ -402,18 +402,6 @@
     <ClCompile Include="boost\boost_normal\property_tree_write_read_json.cpp">
       <Filter>boost\boost</Filter>
     </ClCompile>
-    <ClCompile Include="boost\boost_normal\ptime_detail_ymdhms.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\replace_all_non_chinese_chs.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\shared_ptr_cyclic_references.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\shared_ptr_use_count_in_multiuse_method.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
     <ClCompile Include="boost\boost_normal\steady_clock_test.cpp">
       <Filter>boost\boost</Filter>
     </ClCompile>
@@ -540,6 +528,18 @@
       <Filter>boost\boost</Filter>
     </ClInclude>
     <ClInclude Include="boost\boost_normal\print_thread_id.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\ptime_test.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\regex_test.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\shared_ptr_cyclic_references.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\shared_ptr_use_count_change_test.h">
       <Filter>boost\boost</Filter>
     </ClInclude>
   </ItemGroup>
