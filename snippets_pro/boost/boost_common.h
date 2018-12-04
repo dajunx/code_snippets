@@ -76,6 +76,7 @@
 
 #include <boost/algorithm/string.hpp>
 #include <boost/algorithm/string/regex.hpp>
+#include <boost/algorithm/string/constants.hpp>
 
 #include <boost/cstdint.hpp>
 // parse string
@@ -91,6 +92,9 @@
 #include <boost/chrono.hpp>
 
 #include <boost/tuple/tuple.hpp>
+#include <boost/tuple/tuple_io.hpp>
+#include <boost/tuple/tuple_comparison.hpp>
+
 #include <boost/type_traits/detail\wrap.hpp>
 
 // 用户自定义头文件

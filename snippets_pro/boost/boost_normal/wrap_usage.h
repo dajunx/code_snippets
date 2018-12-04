@@ -30,18 +30,18 @@ public:
 };
 
 template <typename Handler>
-inline post_wrapped_handler<Handler> post_wrap(boost::asio::io_service &io,
-  Handler h) {
+inline post_wrapped_handler<Handler> post_wrap(
+  boost::asio::io_service &io, Handler h) {
     return post_wrapped_handler<Handler>(io, h);
 }
-
-
 
 //----------------------------main.cpp-----------------------------
 
 using namespace boost::asio;
 
-void fun1() { int i = 0; }
+void wrap_io_fun() {
+  std::cout<<"wrap_io_fun"<<std::endl;
+}
 
 bool wrap_usage() {
   io_service io;
@@ -49,10 +49,9 @@ bool wrap_usage() {
   boost::thread th(boost::bind(&io_service::run, boost::ref(io)));
   th.detach();
 
-  boost::function<void()> ff = post_wrap(boost::ref(io), boost::bind(&fun1));
+  boost::function<void()> ff = post_wrap(boost::ref(io), boost::bind(&wrap_io_fun));
 
   ff(); // callback
   boost::this_thread::sleep(boost::posix_time::seconds(5));
-
   return true;
 }
