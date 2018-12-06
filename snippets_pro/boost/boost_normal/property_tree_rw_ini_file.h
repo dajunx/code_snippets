@@ -6,6 +6,13 @@ property_tree和filesystem实现ini文件的读写，注意点：map结构key必
   否则得使用std::stringstream 对整形的key和字符串 .age 进行入节点前拼接。
 */
 #include "boost_common.h"
+/*
+  need header file:
+  #include <boost/filesystem.hpp>
+  #include <boost/filesystem/fstream.hpp>
+  #include <boost/property_tree/ini_parser.hpp>
+  #include <boost/property_tree/ptree.hpp>
+*/
 
 struct data {
   data(int age_tmp, std::string const &name_tmp)

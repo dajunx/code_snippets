@@ -396,12 +396,6 @@
     <ClCompile Include="boost\boost_normal\multi_index_add_up_view.cpp">
       <Filter>boost\boost</Filter>
     </ClCompile>
-    <ClCompile Include="boost\boost_normal\property_tree_rw_ini_file.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\property_tree_write_read_json.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
     <ClCompile Include="boost\boost_normal\unified_com_client_M_test_stopfun_count.cpp">
       <Filter>boost\boost</Filter>
     </ClCompile>
@@ -537,6 +531,12 @@
       <Filter>boost\boost</Filter>
     </ClInclude>
     <ClInclude Include="boost\boost_normal\chrono_time_test.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\property_tree_rw_ini_file.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\property_tree_write_read_json.h">
       <Filter>boost\boost</Filter>
     </ClInclude>
   </ItemGroup>

@@ -120,8 +120,8 @@
     <ClCompile Include="boost\boost_normal\multi_index_add_up_view.cpp" />
     <ClInclude Include="boost\boost_normal\tokenizer_lib_test.h" />
     <ClInclude Include="boost\boost_normal\print_thread_id.h" />
-    <ClCompile Include="boost\boost_normal\property_tree_rw_ini_file.cpp" />
-    <ClCompile Include="boost\boost_normal\property_tree_write_read_json.cpp" />
+    <ClInclude Include="boost\boost_normal\property_tree_rw_ini_file.h" />
+    <ClInclude Include="boost\boost_normal\property_tree_write_read_json.h" />
     <ClInclude Include="boost\boost_normal\regex_test.h">
       <FileType>CppCode</FileType>
     </ClInclude>
