@@ -100,4 +100,8 @@
 // 用户自定义头文件
 #include "E:\Work\iSpeak\common\sdk\utilities\inc\bind_weak_ptr.hpp"
 
+// operator+=()
+#include <boost/assign/std/vector.hpp>
+#include <boost/assert.hpp>; 
+
 #undef BOOST_COMMON_HEADER

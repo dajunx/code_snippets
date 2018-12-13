@@ -372,33 +372,6 @@
     <ClCompile Include="3rd\protobuf_test\main.cpp">
       <Filter>normal_cplusplus\3rd\protobuf_test</Filter>
     </ClCompile>
-    <ClCompile Include="boost\boost_normal\filesystem_create_rm_parse_file.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\filesystem_path_test.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\filesystem_read_write_content_2_file.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\filesystem_savefile_del_oldfile.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\functio_return_value_life_cycle.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\function_bypass_parameter_usage.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\linux_get_file_property.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\multi_index_add_up_view.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_normal\unified_com_client_M_test_stopfun_count.cpp">
-      <Filter>boost\boost</Filter>
-    </ClCompile>
     <ClCompile Include="boost\boost_multi_thread\once_outine_test.cpp">
       <Filter>boost\multiple_thread</Filter>
     </ClCompile>
@@ -537,6 +510,33 @@
       <Filter>boost\boost</Filter>
     </ClInclude>
     <ClInclude Include="boost\boost_normal\property_tree_write_read_json.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\linux_get_file_property.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\filesystem_dir_file_content_test.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\filesystem_path_test.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\assign_items_to_container.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\filesystem_get_path_all_files.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\filesystem_savefile_del_oldfile.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\function_bypass_parameter_usage.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\multi_index_add_up_view.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_normal\unified_com_client_M_test_stopfun_count.h">
       <Filter>boost\boost</Filter>
     </ClInclude>
   </ItemGroup>
