@@ -1,9 +1,10 @@
 ﻿// ipv6 转换测试
 
-#include "boost/bind.hpp"
-#include <boost/asio.hpp>
-#include <iostream>
-#include <string>
+// header file.
+//#include "boost/bind.hpp"
+//#include <boost/asio.hpp>
+//#include <iostream>
+//#include <string>
 
 const short multicast_port = 9999;
 
@@ -56,7 +57,7 @@ private:
   char data_[max_length];
 };
 
-int main(int argc, char *argv[]) {
+bool ipv6_test() {
   try {
     //     if (argc != 3)
     //     {

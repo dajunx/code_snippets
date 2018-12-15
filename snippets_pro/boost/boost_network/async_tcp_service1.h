@@ -2,13 +2,15 @@
 1、接受client连接采用阻塞方式；
 2、数据传输放在io_sevice上面，非阻塞方式；
 */
-#include <boost/asio.hpp>
-#include <boost/bind.hpp>
-#include <boost/date_time/posix_time/posix_time.hpp>
-#include <boost/make_shared.hpp>
-#include <boost/shared_ptr.hpp>
-#include <boost/thread.hpp>
-#include <iostream>
+
+// header file.
+//#include <boost/asio.hpp>
+//#include <boost/bind.hpp>
+//#include <boost/date_time/posix_time/posix_time.hpp>
+//#include <boost/make_shared.hpp>
+//#include <boost/shared_ptr.hpp>
+//#include <boost/thread.hpp>
+//#include <iostream>
 
 #define max_length 1024
 using boost::asio::ip::tcp;
@@ -83,7 +85,7 @@ private:
   std::vector<boost::shared_ptr<tcp::socket>> vec_socket_ptr_;
 };
 
-int main() {
+bool async_tcp_service_1() {
   boost::asio::io_service io_service;
   boost::asio::io_service::work work(io_service);
   server s(io_service, 9999);
@@ -96,5 +98,5 @@ int main() {
     s.receive_client_conn();
   } while (1);
 
-  return 0;
+  return true;
 }

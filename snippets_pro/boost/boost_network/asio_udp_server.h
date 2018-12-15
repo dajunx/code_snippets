@@ -1,7 +1,9 @@
 ﻿//使用boost库asio实现的udp服务器
-#include <boost/asio.hpp>
-#include <boost/bind.hpp>
-#include <iostream>
+
+// header file.
+//#include <boost/asio.hpp>
+//#include <boost/bind.hpp>
+
 #define max_length 1024
 using boost::asio::ip::udp;
 
@@ -49,12 +51,12 @@ public:
   char buff_[max_length];
 };
 
-int main() {
+bool asio_udp_server() {
   boost::asio::io_service io_service;
   boost::asio::ip::udp::endpoint endpoint(udp::v4(), 9999);
 
   service s(io_service, endpoint);
   io_service.run();
 
-  return 0;
+  return true;
 }

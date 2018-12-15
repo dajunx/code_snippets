@@ -1,8 +1,10 @@
 ﻿//异步方式 tcp service，分层
-#include <boost/asio.hpp>
-#include <boost/bind.hpp>
-#include <cstdlib>
-#include <iostream>
+
+// header file.
+//#include <boost/asio.hpp>
+//#include <boost/bind.hpp>
+//#include <cstdlib>
+//#include <iostream>
 
 #define max_length 1024
 using boost::asio::ip::tcp;
@@ -83,11 +85,11 @@ private:
   tcp::acceptor acceptor_;
 };
 
-int main() {
+bool async_tcp_service_0() {
   boost::asio::io_service io_service;
 
   server s(io_service, 9999);
   io_service.run();
 
-  return 0;
+  return true;
 }

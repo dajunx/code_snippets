@@ -1,8 +1,10 @@
 ﻿//使用boost库asio实现的udp客户端
-#include <boost/asio.hpp>
-#include <boost/bind.hpp>
-#include <boost/thread/mutex.hpp>
-#include <iostream>
+
+// header file.
+//#include <boost/asio.hpp>
+//#include <boost/bind.hpp>
+//#include <boost/thread/mutex.hpp>
+
 using boost::asio::ip::udp;
 
 class service {
@@ -73,12 +75,12 @@ private:
 };
 boost::uint32_t service::request_id_(0);
 
-int main() {
+bool asio_udp_client() {
   boost::asio::io_service io_service;
   boost::asio::ip::udp::endpoint endpoint(udp::v4(), 0);
 
   service s(io_service, endpoint);
   io_service.run();
 
-  return 0;
+  return true;
 }

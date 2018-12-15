@@ -1,13 +1,16 @@
 ﻿//同步方式 tcp client
-#include <boost/asio.hpp>
-#include <cstdlib>
-#include <cstring>
-#include <iostream>
-#include <string>
+
+// header file.
+//#include <boost/asio.hpp>
+//#include <cstdlib>
+//#include <cstring>
+//#include <iostream>
+//#include <string>
+
 using boost::asio::ip::tcp;
 #define max_length 1024
 
-int main(int argc, char *argv[]) {
+bool sync_tcp_client() {
   try {
     boost::asio::io_service io_service;
     tcp::resolver resolver(io_service);
@@ -48,5 +51,5 @@ int main(int argc, char *argv[]) {
     std::cerr << "Exception: " << e.what() << "\n";
   }
 
-  return 0;
+  return true;
 }
