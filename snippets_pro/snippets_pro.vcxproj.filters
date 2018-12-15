@@ -372,18 +372,6 @@
     <ClCompile Include="3rd\protobuf_test\main.cpp">
       <Filter>normal_cplusplus\3rd\protobuf_test</Filter>
     </ClCompile>
-    <ClCompile Include="boost\boost_multi_thread\once_outine_test.cpp">
-      <Filter>boost\multiple_thread</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_multi_thread\thread_condition_test.cpp">
-      <Filter>boost\multiple_thread</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_multi_thread\thread_local_data_save.cpp">
-      <Filter>boost\multiple_thread</Filter>
-    </ClCompile>
-    <ClCompile Include="boost\boost_multi_thread\thread_mutex.cpp">
-      <Filter>boost\multiple_thread</Filter>
-    </ClCompile>
     <ClCompile Include="boost\boost_network\async_tcp_service0.cpp">
       <Filter>boost\network</Filter>
     </ClCompile>
@@ -538,6 +526,18 @@
     </ClInclude>
     <ClInclude Include="boost\boost_normal\unified_com_client_M_test_stopfun_count.h">
       <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_multi_thread\call_once.h">
+      <Filter>boost\multiple_thread</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_multi_thread\condition_test.h">
+      <Filter>boost\multiple_thread</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_multi_thread\test_local_data.h">
+      <Filter>boost\multiple_thread</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\boost_multi_thread\test_mutex.h">
+      <Filter>boost\multiple_thread</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

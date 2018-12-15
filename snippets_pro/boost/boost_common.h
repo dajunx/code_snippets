@@ -104,4 +104,13 @@
 #include <boost/assign/std/vector.hpp>
 #include <boost/assert.hpp>; 
 
+#include <boost/thread/once.hpp>
+
+#include <boost/thread/condition.hpp>
+#include <boost/thread/tss.hpp>
+
+#include <boost/thread/lock_guard.hpp> // lock_guard 头文件
+#include <boost/thread/lock_types.hpp> // unique_lock 头文件
+#include <boost/thread/shared_mutex.hpp> // shared_lock 需要
+
 #undef BOOST_COMMON_HEADER

@@ -1,15 +1,18 @@
-﻿// boost thread库mutex使用
-//函数作用域的锁（放在函数开始），会在return
-//之后再解锁（把return的数据压栈）？待在研究
-#include <boost/bind.hpp>
-#include <boost/date_time/posix_time/posix_time.hpp>
-#include <boost/function.hpp>
-#include <boost/thread/lock_guard.hpp> // lock_guard 头文件
-#include <boost/thread/lock_types.hpp> // unique_lock 头文件
-#include <boost/thread/mutex.hpp>
-#include <boost/thread/shared_mutex.hpp> // shared_lock 需要
-#include <boost/thread/thread.hpp>
-#include <iostream>
+﻿/* 
+  boost thread库mutex使用
+  函数作用域的锁（放在函数开始），会在return
+  TODO 之后再解锁（把return的数据压栈）？待在研究
+*/
+
+// header file.
+//#include <boost/bind.hpp>
+//#include <boost/date_time/posix_time/posix_time.hpp>
+//#include <boost/function.hpp>
+//#include <boost/thread/lock_guard.hpp> // lock_guard 头文件
+//#include <boost/thread/lock_types.hpp> // unique_lock 头文件
+//#include <boost/thread/mutex.hpp>
+//#include <boost/thread/shared_mutex.hpp> // shared_lock 需要
+//#include <boost/thread/thread.hpp>
 
 boost::mutex mutex_;
 boost::shared_mutex shared_mutex_;
@@ -56,7 +59,7 @@ void fun5() {
   }
 }
 
-int main() {
+bool test_thread_lock() {
   boost::function<void()> ff = boost::bind(&fun5);
   boost::thread th1(ff);
   boost::thread th2(ff);
@@ -64,5 +67,6 @@ int main() {
   th2.join();
 
   std::cout << "temp :" << temp << std::endl;
-  return 0;
+
+  return true;
 }

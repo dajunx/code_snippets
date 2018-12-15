@@ -1,8 +1,13 @@
-﻿//线程的本地存储
-#include <boost/thread/mutex.hpp>
-#include <boost/thread/thread.hpp>
-#include <boost/thread/tss.hpp>
-#include <iostream>
+﻿/*
+  线程的本地存储
+  TODO 有点不解，待完善
+*/
+
+// header file.
+//#include <boost/thread/mutex.hpp>
+//#include <boost/thread/thread.hpp>
+//#include <boost/thread/tss.hpp>
+
 boost::mutex io_mutex;
 boost::thread_specific_ptr<int> ptr;
 
@@ -23,10 +28,11 @@ struct count {
   int id;
 };
 
-int main(int argc, char *argv[]) {
+bool test_thread_local_data() {
   boost::thread thrd1(count(1));
   boost::thread thrd2(count(2));
   thrd1.join();
   thrd2.join();
-  return 0;
+
+  return true;
 }

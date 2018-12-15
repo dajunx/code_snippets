@@ -82,10 +82,10 @@
     <ClCompile Include="3rd\protobuf_test\lm.helloworld.pb.cc" />
     <ClCompile Include="3rd\protobuf_test\main.cpp" />
     <ClCompile Include="3rd\tools.cpp" />
-    <ClCompile Include="boost\boost_multi_thread\once_outine_test.cpp" />
-    <ClCompile Include="boost\boost_multi_thread\thread_condition_test.cpp" />
-    <ClCompile Include="boost\boost_multi_thread\thread_local_data_save.cpp" />
-    <ClCompile Include="boost\boost_multi_thread\thread_mutex.cpp" />
+    <ClInclude Include="boost\boost_multi_thread\call_once.h" />
+    <ClInclude Include="boost\boost_multi_thread\condition_test.h" />
+    <ClInclude Include="boost\boost_multi_thread\test_local_data.h" />
+    <ClInclude Include="boost\boost_multi_thread\test_mutex.h" />
     <ClCompile Include="boost\boost_network\asio_udp_client.cpp" />
     <ClCompile Include="boost\boost_network\asio_udp_server.cpp" />
     <ClCompile Include="boost\boost_network\async_tcp_service0.cpp" />
