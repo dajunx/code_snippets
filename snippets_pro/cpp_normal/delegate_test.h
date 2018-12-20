@@ -1,9 +1,6 @@
 ﻿//简单委托
 
-#include <boost/bind.hpp>
-#include <boost/function.hpp>
-#include <iostream>
-#include <string>
+#include "boost_common.h"
 
 void englishgreeting(std::string name) {
   std::cout << "Morning, " << name << std::endl;
@@ -17,8 +14,9 @@ void GreetPople(std::string name, boost::function<void(std::string)> fun) {
   fun(name);
 }
 
-int main() {
+bool test_delegate() {
   GreetPople("lin", boost::bind(chinesegreeting, _1));
   GreetPople("xxx", boost::bind(chinesegreeting, _1));
-  return 0;
+
+  return true;
 }

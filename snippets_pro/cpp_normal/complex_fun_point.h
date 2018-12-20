@@ -1,7 +1,7 @@
 ﻿//复杂函数指针
 //复杂的函数指针，指针形参为 函数指针
 
-#include <iostream>
+#include "cplusplus_common_def.hpp"
 
 typedef int (*pfun)(int);
 typedef int (*pfunmulti)(pfun);
@@ -13,7 +13,7 @@ int fun1(int i) {
 
 int fun2(pfun p_fun) { return (*p_fun)(9); }
 
-int main() {
+bool test_complex_function_point() {
   pfun p_fun;
   pfunmulti p_fun_multi;
   //   int (*p_fun)(int i);
@@ -24,5 +24,5 @@ int main() {
   p_fun_multi = &fun2;
   p_fun_multi(p_fun);
 
-  return (0);
+  return true;
 }

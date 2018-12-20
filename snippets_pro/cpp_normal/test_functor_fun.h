@@ -14,7 +14,8 @@
 */
 // link:http://baike.baidu.com/view/2070037.htm
 
-#include <iostream>
+#include "cplusplus_common_def.hpp"
+
 class compare_class {
 public:
   bool operator()(int A, int B) const { return A < B; }
@@ -25,8 +26,10 @@ void sort_ints(int *begin_items, int num_items, ComparisonFunctor c) {
   c(begin_items[0], begin_items[1]);
 }
 
-int main() {
+bool test_functor_fun() {
   int items[] = {4, 3, 1, 2};
   compare_class functor;
   sort_ints(items, sizeof(items) / sizeof(items[0]), functor);
+
+  return true;
 }

@@ -3,16 +3,14 @@
 new 的时候，用已经分配内存的地址返回给待分配内存指针。比较特殊
 */
 
-#include <iostream>
-class test {
-public:
-  test() {}
-  ~test() {}
-};
+#include "cplusplus_common_def.hpp"
 
-int main() {
+bool test_another_new() {
   void *pp = new int(5);
   // int* pp = new int(5); // this way has the same result
-  int *p = new (pp) int();
-  return 0;
+
+  // 获取到的内存地址会被初始化成1，即 pp 和 p 都指向相同地址且 值为1
+  int *p = new (pp) int(1);
+  
+  return true;
 }

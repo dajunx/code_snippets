@@ -1,11 +1,10 @@
 ﻿//模仿bind例子(非模板)
-#include <algorithm>
-#include <boost/function.hpp>
-#include <boost/make_shared.hpp>
-#include <boost/shared_ptr.hpp>
-#include <iostream>
-#include <iterator>
-#include <vector>
+#include "cplusplus_common_def.hpp"
+
+// header file.
+//#include <iostream>
+//#include <vector>
+
 namespace {
 class placeholder {};
 placeholder _1;
@@ -41,7 +40,7 @@ simple_bind_t simple_bind(void (Test::*fn)(const std::vector<int> &),
   return simple_bind_t(fn, t);
 }
 
-int main() {
+bool test_non_boost_bind_example() {
   Test t;
   // boost::shared_ptr<Test> ptr_test = boost::make_shared<Test>();
   std::vector<int> vec;
@@ -50,5 +49,5 @@ int main() {
   // boost::function<void(const std::vector<int>&)>
   // f(simple_bind(&Test::do_stuff, *ptr_test, _1)); ptr_test.reset(); //绑定完后
   // 就算对象析构掉后，f调用也没问题。 f(vec);
-  return 0;
+  return true;
 }

@@ -73,57 +73,18 @@
     <Filter Include="normal_cplusplus\3rd\protobuf_test">
       <UniqueIdentifier>{b7d7555f-d728-4560-9b2e-17daa82d352b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="normal_cplusplus\algorithm">
+      <UniqueIdentifier>{d52acb4a-9792-40e3-8844-e592d8a40348}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="others\map_erase_element_effective.cpp">
       <Filter>others</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_normal\cplusplus_friend_fun_class.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\cplusplus_random_example.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\cplusplus_time_test.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\cpp_constructor_copying_cycle.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\delegate_test.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\functor_fun.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\get_operator_fun_address.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\i_plusplus_i_operator.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
     <ClCompile Include="cpp_normal\load_file_content_into_pchar.cpp">
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_normal\log4cplus_test.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\macro_FILE_warnning.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
     <ClCompile Include="cpp_normal\msg_dispatch.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\new_operator_another_method.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\non_boost_function_bind_usage.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\normal_funciton_point.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\not_template_bind_example.cpp">
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClCompile>
     <ClCompile Include="cpp_normal\random_shuffle_test.cpp">
@@ -165,22 +126,7 @@
     <ClCompile Include="cpp_normal\a_named_pipe.cpp">
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_normal\array_copy_snippet.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\c_style_io_test.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\class_assignment_pk_initialization.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\class_function_point.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
     <ClCompile Include="cpp_normal\class_inline_class.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\complex_fun_point.cpp">
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClCompile>
     <ClCompile Include="cpp_network\epoll\net_epoll_client.cpp">
@@ -288,9 +234,6 @@
     <ClCompile Include="cpp_normal\template_err_case1.cpp">
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_normal\compare_files_contents.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
     <ClCompile Include="cpp_interface\mysql_connector_direct.cpp">
       <Filter>normal_cplusplus\interface</Filter>
     </ClCompile>
@@ -342,12 +285,6 @@
     <ClCompile Include="others\getMusic163SongsCommentsInfo.cpp">
       <Filter>others</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_normal\product_random_num_base_from_time.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\happyNumber.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
     <ClCompile Include="3rd\tools.cpp">
       <Filter>normal_cplusplus\3rd</Filter>
     </ClCompile>
@@ -374,6 +311,12 @@
     </ClCompile>
     <ClCompile Include="cpp_normal\fun_para_not_in_order.cpp">
       <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithm\happyNumber.cpp">
+      <Filter>normal_cplusplus\algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp_normal\log4cplus_test.cpp">
+      <Filter>others</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -538,6 +481,54 @@
     </ClInclude>
     <ClInclude Include="boost\boost_network\sync_tcp_client.h">
       <Filter>boost\network</Filter>
+    </ClInclude>
+    <ClInclude Include="cplusplus_common_def.hpp">
+      <Filter>normal_cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\array_copy.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\c_style_io_test.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_function_point.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\complex_fun_point.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_cplusplus_friend_fun_class.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_random.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_time.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_cplusplus_constructor_copying_cycle.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\delegate_test.h">
+      <Filter>boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_functor_fun.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\i_plusplus_i_operator.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\macro_FILE.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_another_new.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\non_boost_function_bind_usage.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\non_boost_bind_example.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,5 @@
 ﻿//友元函数 友元类
-#include <iostream>
+#include "cplusplus_common_def.hpp"
 
 class test {
 public:
@@ -8,7 +8,9 @@ public:
 
 private:
   void doSomeThing() { int i = 0; }
+  // 友元函数
   friend void do_private_fun(test *pT);
+  // 友元类
   friend class test_friend;
 };
 
@@ -21,10 +23,12 @@ public:
 
 void do_private_fun(test *pT) { pT->doSomeThing(); }
 
-int main() {
+bool test_cplusplus_friend_usage() {
   test tt;
-  test_friend tf;
   do_private_fun(&tt);
+
+  test_friend tf;
   tf.do_class_private_fun(&tt);
-  return 0;
+
+  return true;
 }

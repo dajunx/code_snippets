@@ -1,11 +1,13 @@
 ﻿// c++ time 相关 初步体验
 
-#include <Windows.h> //Sleep()
-#include <ctime>     //包含 #include <time.h>
-#include <iostream>
-#include <string>
+// header file.
+//#include <Windows.h> //Sleep()
+//#include <ctime>     //包含 #include <time.h>
+//#include <iostream>
+//#include <string>
+#include "cplusplus_common_def.hpp"
 
-int main() {
+bool test_time() {
   //系统的当前日历时间，自
   //1970年1月1日以来经过的秒数(时间戳)。如果系统没有时间，则返回 .1。 time_t
   // time(time_t *time);
@@ -57,7 +59,7 @@ int main() {
   size_t st = strftime(strptr, sizeof(char) * 31, "%A", p_tm1);
 
   int i = 0;
-  return 0;
+  return true;
 }
 
 /*
