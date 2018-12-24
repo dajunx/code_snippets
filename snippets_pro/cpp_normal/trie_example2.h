@@ -1,9 +1,11 @@
 ﻿// url:http://blog.csdn.net/hguisu/article/details/8131559
 
-#include "stdlib.h"
-#include <iostream>
-#include <stdio.h>
-#include <string.h>
+#include "cplusplus_common_def.hpp"
+// header file.
+//#include "stdlib.h"
+//#include <iostream>
+//#include <stdio.h>
+//#include <string.h>
 using namespace std;
 
 #define NULL 0

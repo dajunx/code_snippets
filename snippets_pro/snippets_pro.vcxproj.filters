@@ -84,45 +84,6 @@
     <ClCompile Include="cpp_normal\load_file_content_into_pchar.cpp">
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_normal\msg_dispatch.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\random_shuffle_test.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\set_container_random.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\simple_file_read_and_write.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\simple_random_02.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\template_bind_example.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\trie_example1.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\trie_example2.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\type_conversion_operator_fun.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\va_start_va_end_va_list_example.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\virtual_usage.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\visit_class_fun_and_normal_fun.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\win_calculate_costs_time.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
     <ClCompile Include="cpp_normal\a_named_pipe.cpp">
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClCompile>
@@ -225,13 +186,7 @@
     <ClCompile Include="thread_win\thread_semaphore.cpp">
       <Filter>normal_cplusplus\thread_win</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_normal\twoFileContentsMerge.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
     <ClCompile Include="cpp_normal\fflush_test.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\template_err_case1.cpp">
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClCompile>
     <ClCompile Include="cpp_interface\mysql_connector_direct.cpp">
@@ -316,6 +271,12 @@
       <Filter>normal_cplusplus\algorithm</Filter>
     </ClCompile>
     <ClCompile Include="cpp_normal\log4cplus_test.cpp">
+      <Filter>others</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp_normal\virtual_usage.cpp">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClCompile>
+    <ClCompile Include="others\msg_dispatch.cpp">
       <Filter>others</Filter>
     </ClCompile>
   </ItemGroup>
@@ -528,6 +489,33 @@
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClInclude>
     <ClInclude Include="cpp_normal\non_boost_bind_example.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\random_shuffle_test.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\simple_file_read_and_write.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\template_bind_test.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\template_err_case1.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\trie_example1.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\trie_example2.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\type_conversion_operator_fun_test.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\win_calculate_costs_time.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\va_start_va_end_va_list_test.h">
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClInclude>
   </ItemGroup>

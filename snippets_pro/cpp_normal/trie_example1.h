@@ -1,10 +1,12 @@
 ﻿// Trie树 实现，用后续遍历所有节点
 // url:http://www.cnblogs.com/dlutxm/archive/2011/10/26/2225660.html
 
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <vector>
+#include "cplusplus_common_def.hpp"
+// header file.
+//#include <fstream>
+//#include <iostream>
+//#include <string>
+//#include <vector>
 
 #define Max 26
 using namespace std;
@@ -69,7 +71,7 @@ void print_all_node(Node *head) {
   }
 }
 
-int main() {
+bool test_trie_example1() {
   Node *head = createNew();
 
   std::ifstream filein("word.txt");
@@ -86,5 +88,5 @@ int main() {
 
   print_all_node(head);
 
-  return 0;
+  return true;
 }

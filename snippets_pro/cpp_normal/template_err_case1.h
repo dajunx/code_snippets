@@ -3,9 +3,12 @@
   编程容易出现的一个问题。尚不能描述错处的原因，只知道当template和typedef有冲突的case。
   TODO 待研究
 */
-#include <boost/make_shared.hpp>
-#include <boost/shared_ptr.hpp>
-#include <iostream>
+
+#include "cplusplus_common_def.hpp"
+//header file.
+//#include <boost/make_shared.hpp>
+//#include <boost/shared_ptr.hpp>
+//#include <iostream>
 
 class base {
 public:
@@ -51,7 +54,7 @@ void test1::fun1(boost::shared_ptr<base> const &ptr_base) {
   }
 }
 
-int main() {
+bool test_template_err_case1() {
   boost::shared_ptr<child1> ptr_ch1 = boost::make_shared<child1>();
   boost::shared_ptr<child2> ptr_ch2 = boost::make_shared<child2>();
 
@@ -61,5 +64,5 @@ int main() {
   // ptr_ch为NULL的情况，原因待探究
   tt.fun1<child2>(boost::dynamic_pointer_cast<base>(ptr_ch2));
 
-  return 0;
+  return true;
 }

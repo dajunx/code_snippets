@@ -1,11 +1,12 @@
-﻿
-//在windows端 精确计算 时间间隔
+﻿//在windows端 精确计算 时间间隔
 
-#include <iostream>
-#include <windows.h>
+#include "cplusplus_common_def.hpp"
+// header file.
+//#include <iostream>
+//#include <windows.h>
 using namespace std;
 
-int main() {
+bool calculate_costs_time() {
   LARGE_INTEGER Frequency;              //计数器频率
   LARGE_INTEGER start_PerformanceCount; //起始计数器
   LARGE_INTEGER end_PerformanceCount;   //结束计数器
@@ -16,8 +17,8 @@ int main() {
 
     QueryPerformanceCounter(&start_PerformanceCount);
 
-    //运行测试的代码
-    Sleep(10);
+    //耗时运算
+    Sleep(1000);
 
     QueryPerformanceCounter(&end_PerformanceCount);
     run_time =
@@ -26,5 +27,5 @@ int main() {
     cout << run_time << endl;
   }
 
-  return 0;
+  return true;
 }

@@ -32,9 +32,9 @@ int writeMultiString(void *c, ...) {
   return 0;
 }
 
-int main() {
+bool test_va_xxx() {
   simple_va_fun(100, -1);
   simple_va_fun(100, 200, -1);
 
-  return 0;
+  return true;
 }
