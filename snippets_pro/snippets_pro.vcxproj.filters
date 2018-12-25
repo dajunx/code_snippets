@@ -81,15 +81,6 @@
     <ClCompile Include="others\map_erase_element_effective.cpp">
       <Filter>others</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_normal\load_file_content_into_pchar.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\a_named_pipe.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\class_inline_class.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
     <ClCompile Include="cpp_network\epoll\net_epoll_client.cpp">
       <Filter>normal_cplusplus\network\epoll</Filter>
     </ClCompile>
@@ -186,9 +177,6 @@
     <ClCompile Include="thread_win\thread_semaphore.cpp">
       <Filter>normal_cplusplus\thread_win</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_normal\fflush_test.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
     <ClCompile Include="cpp_interface\mysql_connector_direct.cpp">
       <Filter>normal_cplusplus\interface</Filter>
     </ClCompile>
@@ -264,17 +252,11 @@
     <ClCompile Include="3rd\protobuf_test\main.cpp">
       <Filter>normal_cplusplus\3rd\protobuf_test</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_normal\fun_para_not_in_order.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClCompile>
     <ClCompile Include="algorithm\happyNumber.cpp">
       <Filter>normal_cplusplus\algorithm</Filter>
     </ClCompile>
     <ClCompile Include="cpp_normal\log4cplus_test.cpp">
       <Filter>others</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\virtual_usage.cpp">
-      <Filter>normal_cplusplus\cplusplus</Filter>
     </ClCompile>
     <ClCompile Include="others\msg_dispatch.cpp">
       <Filter>others</Filter>
@@ -516,6 +498,21 @@
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClInclude>
     <ClInclude Include="cpp_normal\va_start_va_end_va_list_test.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\load_file_content_into_pchar.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\fun_para_not_in_order.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\fflush_test.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\virtual_usage.h">
+      <Filter>normal_cplusplus\cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\class_inline_class.h">
       <Filter>normal_cplusplus\cplusplus</Filter>
     </ClInclude>
   </ItemGroup>

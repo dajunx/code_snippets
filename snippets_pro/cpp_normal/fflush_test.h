@@ -17,8 +17,12 @@
   1、http://c.biancheng.net/cpp/html/2506.html
   2、http://c.biancheng.net/cpp/html/265.html
 */
-#include <stdio.h>
-#include <stdlib.h>
+
+#include "cplusplus_common_def.hpp"
+//header file.
+//#include <stdio.h>
+//#include <stdlib.h>
+
 char outbuf[BUFSIZ];
 
 void getInputDataFromBuf() {
@@ -39,8 +43,9 @@ void ConnBufWithStream() {
   puts(outbuf);   // 输出
 }
 
-int main() {
+bool test_fflush() {
   getInputDataFromBuf();
   ConnBufWithStream();
-  return 0;
+
+  return true;
 }

@@ -5,7 +5,9 @@ pD->DoSomething(); pB->DoSomething(); 是静态绑定，调用各自类的成员
 */
 // url: http://blog.csdn.net/chgaowei/article/details/6427731
 
-#include <iostream>
+#include "cplusplus_common_def.hpp"
+// header file.
+//#include <iostream>
 
 class B {
 public:
@@ -25,7 +27,7 @@ public:
   virtual void vfun(){};
 };
 
-int main() {
+bool test_virtual_usage() {
   D *pD = new D();
   B *pB = pD;
 
@@ -35,5 +37,5 @@ int main() {
   pD->vfun();
   pB->vfun();
 
-  return 0;
+  return true;
 }
