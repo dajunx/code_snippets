@@ -4,9 +4,6 @@
     <Filter Include="normal_cplusplus">
       <UniqueIdentifier>{22124ad2-db7a-48e5-81d9-d428f1c799cf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="normal_cplusplus\cplusplus">
-      <UniqueIdentifier>{0eb09586-86f5-4463-8d01-bf3e94ce8598}</UniqueIdentifier>
-    </Filter>
     <Filter Include="normal_cplusplus\template">
       <UniqueIdentifier>{27af3dfb-7b1c-4112-8fa1-df06515c26ef}</UniqueIdentifier>
     </Filter>
@@ -262,90 +259,6 @@
     </ClInclude>
     <ClInclude Include="cplusplus_common_def.hpp">
       <Filter>normal_cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\array_copy.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\c_style_io_test.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\test_function_point.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\complex_fun_point.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\test_cplusplus_friend_fun_class.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\test_random.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\test_time.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\test_cplusplus_constructor_copying_cycle.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\test_functor_fun.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\i_plusplus_i_operator.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\macro_FILE.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\test_another_new.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\non_boost_function_bind_usage.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\non_boost_bind_example.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\random_shuffle_test.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\simple_file_read_and_write.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\template_bind_test.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\template_err_case1.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\trie_example1.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\trie_example2.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\type_conversion_operator_fun_test.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\win_calculate_costs_time.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\va_start_va_end_va_list_test.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\load_file_content_into_pchar.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\fun_para_not_in_order.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\fflush_test.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\virtual_usage.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\class_inline_class.h">
-      <Filter>normal_cplusplus\cplusplus</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

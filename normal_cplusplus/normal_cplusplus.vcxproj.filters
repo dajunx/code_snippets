@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="cplusplus">
+      <UniqueIdentifier>{228bbd3c-099d-4baa-9836-e2399ac433d1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cpp_normal\class_inline_class.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\complex_fun_point.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\delegate_test.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\fflush_test.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\fun_para_not_in_order.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\i_plusplus_i_operator.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\load_file_content_into_pchar.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\macro_FILE.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\non_boost_bind_example.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\non_boost_function_bind_usage.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\random_shuffle_test.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\simple_file_read_and_write.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\template_bind_test.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\template_err_case1.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_another_new.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_cplusplus_constructor_copying_cycle.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_cplusplus_friend_fun_class.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_function_point.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_functor_fun.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_random.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\test_time.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\trie_example1.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\trie_example2.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\type_conversion_operator_fun_test.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\va_start_va_end_va_list_test.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\virtual_usage.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\win_calculate_costs_time.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\array_copy.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\c_style_io_test.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cpp_normal\compare_files_contents.cpp">
+      <Filter>cplusplus</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp_normal\log4cplus_test.cpp">
+      <Filter>cplusplus</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cpp_normal\array_copy.h" />
+    <ClInclude Include="cpp_normal\class_inline_class.h" />
+    <ClInclude Include="cpp_normal\complex_fun_point.h" />
+    <ClInclude Include="cpp_normal\c_style_io_test.h" />
+    <ClInclude Include="cpp_normal\delegate_test.h" />
+    <ClInclude Include="cpp_normal\fflush_test.h" />
+    <ClInclude Include="cpp_normal\fun_para_not_in_order.h" />
+    <ClInclude Include="cpp_normal\i_plusplus_i_operator.h" />
+    <ClInclude Include="cpp_normal\load_file_content_into_pchar.h" />
+    <ClInclude Include="cpp_normal\macro_FILE.h" />
+    <ClInclude Include="cpp_normal\non_boost_bind_example.h" />
+    <ClInclude Include="cpp_normal\non_boost_function_bind_usage.h" />
+    <ClInclude Include="cpp_normal\random_shuffle_test.h" />
+    <ClInclude Include="cpp_normal\simple_file_read_and_write.h" />
+    <ClInclude Include="cpp_normal\template_bind_test.h" />
+    <ClInclude Include="cpp_normal\template_err_case1.h" />
+    <ClInclude Include="cpp_normal\test_another_new.h" />
+    <ClInclude Include="cpp_normal\test_cplusplus_constructor_copying_cycle.h" />
+    <ClInclude Include="cpp_normal\test_cplusplus_friend_fun_class.h" />
+    <ClInclude Include="cpp_normal\test_function_point.h" />
+    <ClInclude Include="cpp_normal\test_functor_fun.h" />
+    <ClInclude Include="cpp_normal\test_random.h" />
+    <ClInclude Include="cpp_normal\test_time.h" />
+    <ClInclude Include="cpp_normal\trie_example1.h" />
+    <ClInclude Include="cpp_normal\trie_example2.h" />
+    <ClInclude Include="cpp_normal\type_conversion_operator_fun_test.h" />
+    <ClInclude Include="cpp_normal\va_start_va_end_va_list_test.h" />
+    <ClInclude Include="cpp_normal\virtual_usage.h" />
+    <ClInclude Include="cpp_normal\win_calculate_costs_time.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cpp_normal\compare_files_contents.cpp" />
+    <ClCompile Include="cpp_normal\log4cplus_test.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B4BF69D2-E4DB-4321-8179-46102770EBF3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>normal_cplusplus</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
