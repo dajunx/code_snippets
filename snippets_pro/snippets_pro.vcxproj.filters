@@ -240,10 +240,10 @@
     <ClCompile Include="algorithm\happyNumber.cpp">
       <Filter>normal_cplusplus\algorithm</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_normal\log4cplus_test.cpp">
+    <ClCompile Include="others\msg_dispatch.cpp">
       <Filter>others</Filter>
     </ClCompile>
-    <ClCompile Include="others\msg_dispatch.cpp">
+    <ClCompile Include="others\log4cplus_test.cpp">
       <Filter>others</Filter>
     </ClCompile>
   </ItemGroup>

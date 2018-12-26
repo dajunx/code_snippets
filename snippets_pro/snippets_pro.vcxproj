@@ -102,7 +102,6 @@
     <ClCompile Include="cpp_network\select\net_select_test.cpp" />
     <ClCompile Include="cpp_network\select\net_select_web_server.cpp" />
     <ClCompile Include="cpp_network\select_module_keyboard.cpp" />
-    <ClCompile Include="cpp_normal\log4cplus_test.cpp" />
     <ClCompile Include="cpp_stl\test_map_userdef_sort.cpp" />
     <ClCompile Include="cpp_stl\vector_iterator_err.cpp" />
     <ClCompile Include="cpp_stl\vector_speed_by_set_capacity.cpp" />
@@ -113,6 +112,7 @@
     <ClCompile Include="cpp_template\typedef_combine_template_err.cpp" />
     <ClCompile Include="cpp_template\typedef_typename_usage.cpp" />
     <ClCompile Include="others\getMusic163SongsCommentsInfo.cpp" />
+    <ClCompile Include="others\log4cplus_test.cpp" />
     <ClCompile Include="others\map_erase_element_effective.cpp" />
     <ClCompile Include="others\msg_dispatch.cpp" />
     <ClCompile Include="others\parse_json_contents_to_simple_text.cpp" />
