@@ -1,6 +1,6 @@
 ﻿//简单委托
 
-#include "boost_common.h"
+#include "cplusplus_common_def.hpp"
 
 void englishgreeting(std::string name) {
   std::cout << "Morning, " << name << std::endl;

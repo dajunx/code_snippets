@@ -84,7 +84,7 @@ protected:
   Trie_node *root; //根结点(指针)
 };
 
-int main() {
+bool test_trie_example2() {
   Trie t;
   char entry[100];
   t.insert("a", "DET");
@@ -106,4 +106,6 @@ int main() {
   } else {
     cout << "'baby' does not exist at all!" << endl;
   }
+
+  return true;
 }

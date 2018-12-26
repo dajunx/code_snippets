@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cplusplus_common_def.hpp" />
     <ClInclude Include="cpp_normal\array_copy.h" />
     <ClInclude Include="cpp_normal\class_inline_class.h" />
     <ClInclude Include="cpp_normal\complex_fun_point.h" />
@@ -42,8 +43,7 @@
     <ClInclude Include="cpp_normal\win_calculate_costs_time.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpp_normal\compare_files_contents.cpp" />
-    <ClCompile Include="cpp_normal\log4cplus_test.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B4BF69D2-E4DB-4321-8179-46102770EBF3}</ProjectGuid>
@@ -74,6 +74,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\Work\3rd\boost_1_53_0;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Work\3rd\boost_1_53_0\stage\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

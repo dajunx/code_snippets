@@ -7,7 +7,7 @@
 //#include <stdlib.h> /* srand, rand */
 //#include <time.h>   /* time */
 
-void test_random() {
+bool test_random() {
   int iSecret;
 
   /* initialize random seed: */

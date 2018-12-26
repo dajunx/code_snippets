@@ -11,7 +11,7 @@
 //#include <vector>
 
 // map_collect_random 中数据是随机的;
-td::unordered_map<long long, long long> map_collect_random;
+std::unordered_map<long long, long long> map_collect_random;
 
 int myrandom(int i) { return std::rand() % i; }
 

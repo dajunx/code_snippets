@@ -93,13 +93,9 @@
     <ClInclude Include="cpp_normal\c_style_io_test.h">
       <Filter>cplusplus</Filter>
     </ClInclude>
+    <ClInclude Include="cplusplus_common_def.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpp_normal\compare_files_contents.cpp">
-      <Filter>cplusplus</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_normal\log4cplus_test.cpp">
-      <Filter>cplusplus</Filter>
-    </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
 </Project>
