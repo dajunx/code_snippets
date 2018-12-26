@@ -1,8 +1,8 @@
 ﻿/*
   boost 公共头文件
 */
-#ifndef BOOST_COMMON_HEADER
-#define BOOST_COMMON_HEADER
+//#ifndef BOOST_COMMON_HEADER
+//#define BOOST_COMMON_HEADER
 // 系统头文件
 #include <iostream>
 #include <stdio.h>
@@ -22,6 +22,11 @@
 #include <typeinfo>
 
 // boost自带头文件
+
+#include <boost/asio.hpp>
+#include <boost/asio/placeholders.hpp>
+#include <boost/asio/steady_timer.hpp>
+
 #include <boost/config.hpp>
 #include <boost/preprocessor/repetition/enum_binary_params.hpp>
 #include <boost/preprocessor/repetition/enum_params.hpp>
@@ -64,15 +69,12 @@
 
 #include <boost/date_time/posix_time/posix_time.hpp>
 
-#include <boost/asio.hpp>
-#include <boost/asio/placeholders.hpp>
 #include <boost/date_time.hpp>
-#include <boost/asio/steady_timer.hpp>
 
 #include <boost/chrono/chrono.hpp>
 // 协程
-#include <boost/asio/coroutine.hpp>
-#include <boost/asio/yield.hpp>
+#include <boost/coroutine/coroutine.hpp>
+//#include <boost/coroutine/yield.hpp>
 
 #include <boost/algorithm/string.hpp>
 #include <boost/algorithm/string/regex.hpp>
@@ -102,7 +104,7 @@
 
 // operator+=()
 #include <boost/assign/std/vector.hpp>
-#include <boost/assert.hpp>; 
+#include <boost/assert.hpp>
 
 #include <boost/thread/once.hpp>
 
@@ -113,4 +115,4 @@
 #include <boost/thread/lock_types.hpp> // unique_lock 头文件
 #include <boost/thread/shared_mutex.hpp> // shared_lock 需要
 
-#undef BOOST_COMMON_HEADER
+//#undef BOOST_COMMON_HEADER

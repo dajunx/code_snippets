@@ -6,10 +6,10 @@ typedef boost::shared_ptr<boost::asio::io_service> io_service_ptr;
 typedef boost::shared_ptr<boost::asio::io_service::work> io_work_ptr;
 static int task_execute_count = 0;
 
-void fun1(io_service_ptr io) {
+void test_asio_post(io_service_ptr io) {
   std::cout<<"asio execute task, count:" << task_execute_count++ <<std::endl;
   boost::this_thread::sleep(boost::posix_time::seconds(1));
-  io->post(boost::bind(&fun1, io));
+  //io->post(boost::bind(&fun1, io));
 }
 
 bool io_service_common_test() {
@@ -23,7 +23,7 @@ bool io_service_common_test() {
   th.detach();
 
   // 3.向准备就绪的 asio [io_service] 投递任务
-  ptr_io_service->post(boost::bind(&fun1, ptr_io_service));
+  ptr_io_service->post(boost::bind(&test_asio_post, ptr_io_service));
 
   // 4.此处目的是sleep  挂起主线程，好让 io_service 继续执行任务，不会由于父进程销毁而销毁掉
   boost::this_thread::sleep(boost::posix_time::seconds(100));

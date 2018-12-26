@@ -19,21 +19,21 @@ typedef boost::shared_ptr<boost::asio::io_service::work> io_work_ptr;
 volatile boost::uint32_t finished_count = 0;
 volatile bool after_stop_post = false;
 
-struct test1 : public boost::enable_shared_from_this<test1> {
-  test1() {
+struct test_UC_class : public boost::enable_shared_from_this<test_UC_class> {
+  test_UC_class() {
     ptr_io_service = get_instance();
   }
-  ~test1() { int i = 0; }
+  ~test_UC_class() { int i = 0; }
   
   io_service_ptr ptr_io_service;
   
   static io_service_ptr get_instance(bool stop = false,
-                                     boost::shared_ptr<test1> ptr_test1 = nullptr) {
+                                     boost::shared_ptr<test_UC_class> ptr_test1 = nullptr) {
     static io_service_ptr ptr_io_service;
     static io_work_ptr ptr_io_work;
     static boost::shared_ptr<boost::thread> ptr_thread;
     static bool io_service_running = false;
-    static boost::shared_ptr<test1> ptr_instance;
+    static boost::shared_ptr<test_UC_class> ptr_instance;
     
     if (stop) {
       io_service_running = false;
@@ -64,7 +64,7 @@ struct test1 : public boost::enable_shared_from_this<test1> {
         ptr_io_work = boost::make_shared<boost::asio::io_service::work>(
                           boost::ref(*ptr_io_service));
         ptr_thread = boost::make_shared<boost::thread>(
-                         boost::bind(&test1::thread, ptr_io_service, boost::ref(io_service_running)));
+                         boost::bind(&test_UC_class::thread, ptr_io_service, boost::ref(io_service_running)));
                          
         while (!io_service_running) {
           boost::this_thread::sleep(boost::posix_time::milliseconds(1));
@@ -85,6 +85,7 @@ struct test1 : public boost::enable_shared_from_this<test1> {
       try {
         ptr_io_service->run();
       } catch (std::exception& e) {
+        std::cout<<e.what()<<std::endl;
       }
       
       if (io_service_running) {
@@ -105,16 +106,16 @@ struct test1 : public boost::enable_shared_from_this<test1> {
     // ptr_io_service->post(boost::bind(&test1::fun1, shared_from_this(), i));
     // ptr_io_service->post(boost::bind(&test1::fun1,
     // boost::weak_ptr<test1>(shared_from_this()), i));
-    ptr_io_service->post(boost::bind(&test1::fun1, this, i));
+    ptr_io_service->post(boost::bind(&test_UC_class::fun1, this, i));
   }
   
   void post1(int i) {
-    ptr_io_service->post(boost::bind(&test1::fun1, shared_from_this(), i));
+    ptr_io_service->post(boost::bind(&test_UC_class::fun1, shared_from_this(), i));
     // ptr_io_service->post(boost::bind(&test1::fun1,
     // boost::weak_ptr<test1>(shared_from_this()), i));
   }
   
-  static io_service_ptr stop(boost::shared_ptr<test1> ptr_test1) {
+  static io_service_ptr stop(boost::shared_ptr<test_UC_class> ptr_test1) {
     return get_instance(true, ptr_test1);
   }
 };
@@ -123,7 +124,7 @@ bool unified_com_client_M_test_stopfun_count() {
   /*
   test 结构体 get_instance 初始化了一套asio，内部跑着线程，可分派任务
   */
-  boost::shared_ptr<test1> ptr_test1 = boost::make_shared<test1>();
+  boost::shared_ptr<test_UC_class> ptr_test1 = boost::make_shared<test_UC_class>();
   ptr_test1->post(0);
   
   for (int i = 0; i < 20; ++i) {

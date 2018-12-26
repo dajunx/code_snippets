@@ -63,6 +63,9 @@
     <ClInclude Include="boost\boost_normal\virtual_fun_post_test.h" />
     <ClInclude Include="boost\boost_normal\wrap_usage.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="boost\main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C0DA4E8F-D888-4DC7-AB92-56478037CD39}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -92,6 +95,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\Work\3rd\boost_1_53_0;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Work\3rd\boost_1_53_0\stage\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

@@ -31,7 +31,7 @@ public:
   int grade;
 } str_grade;
 
-struct employee {
+struct employee_add_up {
   int id;
   std::string name;
   int age;
@@ -40,7 +40,7 @@ struct employee {
 
   // employee(int id_,std::string name_,int age_):id(id_),name(name_),age(age_),
   // grade(0){}
-  employee(int in_id, std::string in_name, int in_age, int in_index,
+  employee_add_up(int in_id, std::string in_name, int in_age, int in_index,
            str_grade in_grade)
       : id(in_id), name(in_name), age(in_age), index(in_index),
         grade(in_grade) {}
@@ -64,35 +64,35 @@ struct tag_index {};
  */
 
 struct id_key
-    : composite_key<employee, BOOST_MULTI_INDEX_MEMBER(employee, int, id),
-                    BOOST_MULTI_INDEX_MEMBER(employee, std::string, name),
-                    BOOST_MULTI_INDEX_MEMBER(employee, int, age),
-                    BOOST_MULTI_INDEX_MEMBER(employee, int, index)> {};
+    : composite_key<employee_add_up, BOOST_MULTI_INDEX_MEMBER(employee_add_up, int, id),
+                    BOOST_MULTI_INDEX_MEMBER(employee_add_up, std::string, name),
+                    BOOST_MULTI_INDEX_MEMBER(employee_add_up, int, age),
+                    BOOST_MULTI_INDEX_MEMBER(employee_add_up, int, index)> {};
 
 struct index_key
-    : composite_key<employee, BOOST_MULTI_INDEX_MEMBER(employee, int, age),
-                    BOOST_MULTI_INDEX_MEMBER(employee, int, index)> {};
+    : composite_key<employee_add_up, BOOST_MULTI_INDEX_MEMBER(employee_add_up, int, age),
+                    BOOST_MULTI_INDEX_MEMBER(employee_add_up, int, index)> {};
 
 typedef multi_index_container<
     // employee,
-    boost::shared_ptr<employee>,
+    boost::shared_ptr<employee_add_up>,
     indexed_by<
         ordered_unique<tag<tag_id>, id_key,
                        composite_key_result_less<id_key::result_type>>,
         hashed_non_unique<tag<tag_name>, BOOST_MULTI_INDEX_MEMBER(
-                                            employee, std::string, name)>,
+                                            employee_add_up, std::string, name)>,
         ordered_non_unique<tag<tag_age>,
-                           BOOST_MULTI_INDEX_MEMBER(employee, int, age)>,
+                           BOOST_MULTI_INDEX_MEMBER(employee_add_up, int, age)>,
         hashed_non_unique<tag<tag_index>, index_key,
                           composite_key_result_hash<index_key::result_type>>,
         hashed_non_unique<
             tag<tag_grade>,
             key_from_key<BOOST_MULTI_INDEX_MEMBER(sub_ee, int, grade),
-                         BOOST_MULTI_INDEX_MEMBER(employee, sub_ee, grade)>>>>
-    employee_set;
+                         BOOST_MULTI_INDEX_MEMBER(employee_add_up, sub_ee, grade)>>>>
+    employee_add_up_set;
 
-template <typename type> void print(employee_set &es) {
-  typedef boost::multi_index::index<employee_set, type>::type age_map1;
+template <typename type> void print(employee_add_up_set &es) {
+  typedef boost::multi_index::index<employee_add_up_set, type>::type age_map1;
   age_map1 &age_ = get<type>(es);
   BOOST_AUTO(age_map_begin, age_.begin());
   for (; age_map_begin != age_.end(); age_map_begin++)
@@ -104,29 +104,29 @@ template <typename type> void print(employee_set &es) {
 }
 
 bool multi_index_add_up_view() {
-  employee_set es;
+  employee_add_up_set es;
 
   es.insert(
-      boost::make_shared<employee>(employee(0, "1", 55, 0, str_grade(2))));
+      boost::make_shared<employee_add_up>(employee_add_up(0, "1", 55, 0, str_grade(2))));
   es.insert(
-      boost::make_shared<employee>(employee(1, "1", 20, 1, str_grade(5))));
+      boost::make_shared<employee_add_up>(employee_add_up(1, "1", 20, 1, str_grade(5))));
   es.insert(
-      boost::make_shared<employee>(employee(2, "2", 40, 2, str_grade(3))));
+      boost::make_shared<employee_add_up>(employee_add_up(2, "2", 40, 2, str_grade(3))));
   es.insert(
-      boost::make_shared<employee>(employee(2, "1", 10, 4, str_grade(6))));
+      boost::make_shared<employee_add_up>(employee_add_up(2, "1", 10, 4, str_grade(6))));
   es.insert(
-      boost::make_shared<employee>(employee(2, "2", 35, 5, str_grade(4))));
+      boost::make_shared<employee_add_up>(employee_add_up(2, "2", 35, 5, str_grade(4))));
   es.insert(
-      boost::make_shared<employee>(employee(6, "1", 80, 6, str_grade(1))));
+      boost::make_shared<employee_add_up>(employee_add_up(6, "1", 80, 6, str_grade(1))));
 
   print<tag_id>(es);
 
   //按照 age索引，对容易进行遍历
-  typedef boost::multi_index::index<employee_set, tag_id>::type age_map1;
+  typedef boost::multi_index::index<employee_add_up_set, tag_id>::type age_map1;
   age_map1 &age_ = get<tag_id>(es);
   BOOST_AUTO(age_map_per, age_.find(boost::make_tuple(2, "2", 40, 2)));
-  boost::shared_ptr<employee> ptr_tmp = boost::make_shared<employee>(
-      employee((*age_map_per)->id, (*age_map_per)->name, (*age_map_per)->age,
+  boost::shared_ptr<employee_add_up> ptr_tmp = boost::make_shared<employee_add_up>(
+      employee_add_up((*age_map_per)->id, (*age_map_per)->name, (*age_map_per)->age,
                (*age_map_per)->index, (*age_map_per)->grade));
   ptr_tmp->age = 30;
   age_.replace(age_map_per, ptr_tmp);

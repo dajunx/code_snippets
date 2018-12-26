@@ -8,7 +8,7 @@ std::string g_read_only_path("E:\\System Volume Information");
 
 void write_content_to_disk() {
   path input_path("e:\\tmp.ipp");
-  fstream fs(input_path.native(),
+  std::fstream fs(input_path.native(),
     std::fstream::in | std::fstream::out | std::fstream::app);
   BOOST_AUTO(it, g_file_content_deque.begin());
   for (; it != g_file_content_deque.end(); ++it) {
@@ -19,7 +19,7 @@ void write_content_to_disk() {
 
 void save_all_filenames_to_disk() {
   path input_path("e:\\tmp.txt");
-  fstream fs(input_path.native(),
+  std::fstream fs(input_path.native(),
     std::fstream::in | std::fstream::out | std::fstream::app);
   BOOST_AUTO(it, g_all_file_wholePath_deque.begin());
   int x = 0;
@@ -47,7 +47,7 @@ void read_content_from_file1(std::string const &path_input) {
   }
 
   char c_content[256];
-  fstream fs(input_path.native());
+  std::fstream fs(input_path.native());
   while (fs.getline(c_content, 256)) { // read a line
     g_file_content_deque.push_back(std::string(c_content));
   }
@@ -74,11 +74,11 @@ void read_content_from_file2(std::string const &path_input) {
       return;
   }
 
-  ifstream file(input_path.native());
-  file.seekg(0, ifstream::end);
+  std::ifstream file(input_path.native());
+  file.seekg(0, std::ifstream::end);
   int size = file.tellg();
   char *contents = new char[size];
-  file.seekg(0, ifstream::beg);
+  file.seekg(0, std::ifstream::beg);
   file.read(contents, size);
   contents[size] = '\0';
   g_file_content_deque.push_back(contents);
@@ -87,7 +87,7 @@ void read_content_from_file2(std::string const &path_input) {
 
 void read_content_from_filelist3() {
   path input_path_outer("e:\\tmp.ipp");
-  fstream fs(input_path_outer.native(),
+  std::fstream fs(input_path_outer.native(),
     std::fstream::in | std::fstream::out | std::fstream::app);
 
   BOOST_AUTO(it, g_all_file_wholePath_deque.begin());
@@ -111,12 +111,12 @@ void read_content_from_filelist3() {
           continue;
       }
 
-      ifstream file(input_path.native());
-      file.seekg(0, ifstream::end);
+      std::ifstream file(input_path.native());
+      file.seekg(0, std::ifstream::end);
       int size = file.tellg();
       // if (size > max_size) max_size = size;
       // char* contents = new char [size];
-      file.seekg(0, ifstream::beg);
+      file.seekg(0, std::ifstream::beg);
       file.read(contents, size);
       contents[size] = '\0';
       fs << contents << "\n";
@@ -159,7 +159,7 @@ bool read_filepath_list(std::string const &path_tmp) {
     path input_path(path_tmp);
 
     char c_content[256];
-    fstream fs(input_path.native());
+    std::fstream fs(input_path.native());
     while (fs.getline(c_content, 256)) { // read a line
       g_all_file_wholePath_deque.push_back(std::string(c_content));
       if(!ret) ret = true;
@@ -227,14 +227,14 @@ void copy_files(std::string const &save_path) {
       create_director(dest_path.parent_path(), save_path_tmp);
     }
 
-    fstream fs(dest_path.native(),
+    std::fstream fs(dest_path.native(),
       std::fstream::in | std::fstream::out | std::fstream::app);
 
-    ifstream file(source_path.native());
-    file.seekg(0, ifstream::end);
+    std::ifstream file(source_path.native());
+    file.seekg(0, std::ifstream::end);
     int size = file.tellg();
     char *contents = new char[size];
-    file.seekg(0, ifstream::beg);
+    file.seekg(0, std::ifstream::beg);
     file.read(contents, size);
     contents[size] = '\0';
     file.close();

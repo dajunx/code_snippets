@@ -15,18 +15,18 @@ void cost_time_fun() {
 bool test_calculate_fun_duration_time() {
   boost::posix_time::ptime start_time, end_time;
   boost::posix_time::time_duration time_costs;
-  
+
   start_time = boost::posix_time::microsec_clock::local_time();
   cost_time_fun();
   end_time = boost::posix_time::microsec_clock::local_time();
 
   time_costs = end_time - start_time;
 
-  std::cout<<"start time:"　<< boost::posix_time::to_simple_string(start_time) << std::endl;
-    //output: start time:2018-Jun-11 17:01:09.910169
-  std::cout<<"end time:"　<< boost::posix_time::to_simple_string(end_time) << std::endl;
-    //output: end time:  2018-Jun-11 17:01:25.580065
+  std::cout<<"start time:"<<boost::posix_time::to_simple_string(start_time)<<std::endl;
+  //output: start time:2018-Jun-11 17:01:09.910169
+  std::cout<<"end time:"<<boost::posix_time::to_simple_string(end_time)<<std::endl;
+  //output: end time:  2018-Jun-11 17:01:25.580065
   std::cout << "cost_time_fun 运算耗时:" << time_costs.total_milliseconds() << "ms" << std::endl;
-  
+
   return true;
 }
