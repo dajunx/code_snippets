@@ -1,15 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="boost">
-      <UniqueIdentifier>{22c4c596-a00a-46ec-ab7e-5274ac272bab}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="boost\boost">
-      <UniqueIdentifier>{f6fc1f64-9b72-4d4f-8b74-9f817e68f8fa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="boost\network">
-      <UniqueIdentifier>{a079670a-04a6-481f-80e5-000e18556f89}</UniqueIdentifier>
-    </Filter>
     <Filter Include="normal_cplusplus">
       <UniqueIdentifier>{22124ad2-db7a-48e5-81d9-d428f1c799cf}</UniqueIdentifier>
     </Filter>
@@ -51,9 +42,6 @@
     </Filter>
     <Filter Include="normal_cplusplus\thread_win">
       <UniqueIdentifier>{a4458db0-9c42-4e67-82db-2819655b4cb3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="boost\multiple_thread">
-      <UniqueIdentifier>{23111761-5001-4f63-9d3a-210aa443737d}</UniqueIdentifier>
     </Filter>
     <Filter Include="normal_cplusplus\process_linux">
       <UniqueIdentifier>{0fe3d39c-b344-49b3-9e7f-47e8bf96e435}</UniqueIdentifier>
@@ -272,159 +260,6 @@
     <ClInclude Include="3rd\protobuf_test\lm.helloworld.pb.h">
       <Filter>normal_cplusplus\3rd\protobuf_test</Filter>
     </ClInclude>
-    <ClInclude Include="boost\boost_common.h">
-      <Filter>boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\a_web_weak_ptr_header.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\array.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\atomic.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\bind_life_cycle.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\bind_stl_fun.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\bind_and_function.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\boost_function_bind_mixed_usage.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\boost_multi_index_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\boost_and_normal_random.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\calculate_fun_duration_time.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\cancle_steady_timer.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\coroutine.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\virtual_fun_post_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\filesystem_copy_file.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\function_lib.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\io_service_simple_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\judge_task_io_service_reactor_type.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\tokenizer_lib_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\print_thread_id.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\ptime_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\regex_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\shared_ptr_cyclic_references.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\shared_ptr_use_count_change_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\tuple_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\wrap_usage.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\io_service_wrap_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\split_string.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\asio_steady_timer.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\chrono_time_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\property_tree_rw_ini_file.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\property_tree_write_read_json.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\linux_get_file_property.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\filesystem_dir_file_content_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\filesystem_path_test.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\assign_items_to_container.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\filesystem_get_path_all_files.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\filesystem_savefile_del_oldfile.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\function_bypass_parameter_usage.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\multi_index_add_up_view.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\unified_com_client_M_test_stopfun_count.h">
-      <Filter>boost\boost</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_multi_thread\call_once.h">
-      <Filter>boost\multiple_thread</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_multi_thread\condition_test.h">
-      <Filter>boost\multiple_thread</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_multi_thread\test_local_data.h">
-      <Filter>boost\multiple_thread</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_multi_thread\test_mutex.h">
-      <Filter>boost\multiple_thread</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_network\asio_udp_client.h">
-      <Filter>boost\network</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_network\asio_udp_server.h">
-      <Filter>boost\network</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_network\async_tcp_service0.h">
-      <Filter>boost\network</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_network\async_tcp_service1.h">
-      <Filter>boost\network</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_network\ipv6_test.h">
-      <Filter>boost\network</Filter>
-    </ClInclude>
-    <ClInclude Include="boost\boost_network\sync_tcp_client.h">
-      <Filter>boost\network</Filter>
-    </ClInclude>
     <ClInclude Include="cplusplus_common_def.hpp">
       <Filter>normal_cplusplus</Filter>
     </ClInclude>
@@ -451,9 +286,6 @@
     </ClInclude>
     <ClInclude Include="cpp_normal\test_cplusplus_constructor_copying_cycle.h">
       <Filter>normal_cplusplus\cplusplus</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_normal\delegate_test.h">
-      <Filter>boost\boost</Filter>
     </ClInclude>
     <ClInclude Include="cpp_normal\test_functor_fun.h">
       <Filter>normal_cplusplus\cplusplus</Filter>

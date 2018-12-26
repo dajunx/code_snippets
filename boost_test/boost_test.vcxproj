@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\boost_common.h" />
+    <ClInclude Include="boost\boost_multi_thread\call_once.h" />
+    <ClInclude Include="boost\boost_multi_thread\condition_test.h" />
+    <ClInclude Include="boost\boost_multi_thread\test_local_data.h" />
+    <ClInclude Include="boost\boost_multi_thread\test_mutex.h" />
+    <ClInclude Include="boost\boost_network\asio_udp_client.h" />
+    <ClInclude Include="boost\boost_network\asio_udp_server.h" />
+    <ClInclude Include="boost\boost_network\async_tcp_service0.h" />
+    <ClInclude Include="boost\boost_network\async_tcp_service1.h" />
+    <ClInclude Include="boost\boost_network\ipv6_test.h" />
+    <ClInclude Include="boost\boost_network\sync_tcp_client.h" />
+    <ClInclude Include="boost\boost_normal\array.h" />
+    <ClInclude Include="boost\boost_normal\asio_steady_timer.h" />
+    <ClInclude Include="boost\boost_normal\assign_items_to_container.h" />
+    <ClInclude Include="boost\boost_normal\atomic.h" />
+    <ClInclude Include="boost\boost_normal\a_web_weak_ptr_header.h" />
+    <ClInclude Include="boost\boost_normal\bind_and_function.h" />
+    <ClInclude Include="boost\boost_normal\bind_life_cycle.h" />
+    <ClInclude Include="boost\boost_normal\bind_stl_fun.h" />
+    <ClInclude Include="boost\boost_normal\boost_and_normal_random.h" />
+    <ClInclude Include="boost\boost_normal\boost_function_bind_mixed_usage.h" />
+    <ClInclude Include="boost\boost_normal\boost_multi_index_test.h" />
+    <ClInclude Include="boost\boost_normal\calculate_fun_duration_time.h" />
+    <ClInclude Include="boost\boost_normal\cancle_steady_timer.h" />
+    <ClInclude Include="boost\boost_normal\chrono_time_test.h" />
+    <ClInclude Include="boost\boost_normal\coroutine.h" />
+    <ClInclude Include="boost\boost_normal\filesystem_copy_file.h" />
+    <ClInclude Include="boost\boost_normal\filesystem_dir_file_content_test.h" />
+    <ClInclude Include="boost\boost_normal\filesystem_get_path_all_files.h" />
+    <ClInclude Include="boost\boost_normal\filesystem_path_test.h" />
+    <ClInclude Include="boost\boost_normal\filesystem_savefile_del_oldfile.h" />
+    <ClInclude Include="boost\boost_normal\function_bypass_parameter_usage.h" />
+    <ClInclude Include="boost\boost_normal\function_lib.h" />
+    <ClInclude Include="boost\boost_normal\io_service_simple_test.h" />
+    <ClInclude Include="boost\boost_normal\io_service_wrap_test.h" />
+    <ClInclude Include="boost\boost_normal\judge_task_io_service_reactor_type.h" />
+    <ClInclude Include="boost\boost_normal\linux_get_file_property.h" />
+    <ClInclude Include="boost\boost_normal\multi_index_add_up_view.h" />
+    <ClInclude Include="boost\boost_normal\print_thread_id.h" />
+    <ClInclude Include="boost\boost_normal\property_tree_rw_ini_file.h" />
+    <ClInclude Include="boost\boost_normal\property_tree_write_read_json.h" />
+    <ClInclude Include="boost\boost_normal\ptime_test.h" />
+    <ClInclude Include="boost\boost_normal\regex_test.h" />
+    <ClInclude Include="boost\boost_normal\shared_ptr_cyclic_references.h" />
+    <ClInclude Include="boost\boost_normal\shared_ptr_use_count_change_test.h" />
+    <ClInclude Include="boost\boost_normal\split_string.h" />
+    <ClInclude Include="boost\boost_normal\tokenizer_lib_test.h" />
+    <ClInclude Include="boost\boost_normal\tuple_test.h" />
+    <ClInclude Include="boost\boost_normal\unified_com_client_M_test_stopfun_count.h" />
+    <ClInclude Include="boost\boost_normal\virtual_fun_post_test.h" />
+    <ClInclude Include="boost\boost_normal\wrap_usage.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C0DA4E8F-D888-4DC7-AB92-56478037CD39}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>boost_test</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

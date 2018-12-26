@@ -82,58 +82,6 @@
     <ClCompile Include="3rd\protobuf_test\lm.helloworld.pb.cc" />
     <ClCompile Include="3rd\protobuf_test\main.cpp" />
     <ClCompile Include="3rd\tools.cpp" />
-    <ClInclude Include="boost\boost_multi_thread\call_once.h" />
-    <ClInclude Include="boost\boost_multi_thread\condition_test.h" />
-    <ClInclude Include="boost\boost_multi_thread\test_local_data.h" />
-    <ClInclude Include="boost\boost_multi_thread\test_mutex.h" />
-    <ClInclude Include="boost\boost_network\asio_udp_client.h" />
-    <ClInclude Include="boost\boost_network\asio_udp_server.h" />
-    <ClInclude Include="boost\boost_network\async_tcp_service0.h" />
-    <ClInclude Include="boost\boost_network\async_tcp_service1.h" />
-    <ClInclude Include="boost\boost_network\ipv6_test.h" />
-    <ClInclude Include="boost\boost_network\sync_tcp_client.h" />
-    <ClInclude Include="boost\boost_normal\array.h" />
-    <ClInclude Include="boost\boost_normal\assign_items_to_container.h" />
-    <ClInclude Include="boost\boost_normal\atomic.h" />
-    <ClInclude Include="boost\boost_normal\a_web_weak_ptr_header.h" />
-    <ClInclude Include="boost\boost_normal\bind_life_cycle.h" />
-    <ClInclude Include="boost\boost_normal\bind_stl_fun.h" />
-    <ClInclude Include="boost\boost_normal\bind_and_function.h" />
-    <ClInclude Include="boost\boost_normal\boost_function_bind_mixed_usage.h" />
-    <ClInclude Include="boost\boost_normal\boost_multi_index_test.h" />
-    <ClInclude Include="boost\boost_normal\boost_and_normal_random.h" />
-    <ClInclude Include="boost\boost_normal\calculate_fun_duration_time.h" />
-    <ClInclude Include="boost\boost_normal\cancle_steady_timer.h" />
-    <ClInclude Include="boost\boost_normal\coroutine.h" />
-    <ClInclude Include="boost\boost_normal\ptime_test.h" />
-    <ClInclude Include="boost\boost_normal\virtual_fun_post_test.h" />
-    <ClInclude Include="boost\boost_normal\filesystem_copy_file.h" />
-    <ClInclude Include="boost\boost_normal\filesystem_dir_file_content_test.h" />
-    <ClInclude Include="boost\boost_normal\filesystem_path_test.h" />
-    <ClInclude Include="boost\boost_normal\filesystem_get_path_all_files.h" />
-    <ClInclude Include="boost\boost_normal\filesystem_savefile_del_oldfile.h" />
-    <ClInclude Include="boost\boost_normal\function_bypass_parameter_usage.h" />
-    <ClInclude Include="boost\boost_normal\function_lib.h" />
-    <ClInclude Include="boost\boost_normal\io_service_simple_test.h" />
-    <ClInclude Include="boost\boost_normal\judge_task_io_service_reactor_type.h" />
-    <ClInclude Include="boost\boost_normal\linux_get_file_property.h" />
-    <ClInclude Include="boost\boost_normal\multi_index_add_up_view.h" />
-    <ClInclude Include="boost\boost_normal\tokenizer_lib_test.h" />
-    <ClInclude Include="boost\boost_normal\print_thread_id.h" />
-    <ClInclude Include="boost\boost_normal\property_tree_rw_ini_file.h" />
-    <ClInclude Include="boost\boost_normal\property_tree_write_read_json.h" />
-    <ClInclude Include="boost\boost_normal\regex_test.h">
-      <FileType>CppCode</FileType>
-    </ClInclude>
-    <ClInclude Include="boost\boost_normal\shared_ptr_cyclic_references.h" />
-    <ClInclude Include="boost\boost_normal\shared_ptr_use_count_change_test.h" />
-    <ClInclude Include="boost\boost_normal\chrono_time_test.h" />
-    <ClInclude Include="boost\boost_normal\asio_steady_timer.h" />
-    <ClInclude Include="boost\boost_normal\split_string.h" />
-    <ClInclude Include="boost\boost_normal\tuple_test.h" />
-    <ClInclude Include="boost\boost_normal\unified_com_client_M_test_stopfun_count.h" />
-    <ClInclude Include="boost\boost_normal\io_service_wrap_test.h" />
-    <ClInclude Include="boost\boost_normal\wrap_usage.h" />
     <ClCompile Include="algorithm\happyNumber.cpp" />
     <ClCompile Include="cpp_design\Observer.cpp" />
     <ClCompile Include="cpp_design\SimpleFactoryPatternDemo.cpp" />
@@ -164,7 +112,6 @@
     <ClInclude Include="cpp_normal\test_time.h" />
     <ClInclude Include="cpp_normal\test_cplusplus_constructor_copying_cycle.h" />
     <ClInclude Include="cpp_normal\c_style_io_test.h" />
-    <ClInclude Include="cpp_normal\delegate_test.h" />
     <ClInclude Include="cpp_normal\fflush_test.h" />
     <ClInclude Include="cpp_normal\test_functor_fun.h" />
     <ClInclude Include="cpp_normal\i_plusplus_i_operator.h" />
@@ -222,7 +169,6 @@
     <ClInclude Include="3rd\base64\base64.h" />
     <ClInclude Include="3rd\md5\md5.h" />
     <ClInclude Include="3rd\protobuf_test\lm.helloworld.pb.h" />
-    <ClInclude Include="boost\boost_common.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="3rd\protobuf_test\lm.helloworld.proto" />
