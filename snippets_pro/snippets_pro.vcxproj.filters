@@ -43,21 +43,6 @@
     <Filter Include="normal_cplusplus\process_linux">
       <UniqueIdentifier>{0fe3d39c-b344-49b3-9e7f-47e8bf96e435}</UniqueIdentifier>
     </Filter>
-    <Filter Include="normal_cplusplus\3rd">
-      <UniqueIdentifier>{0020d2be-241c-4f46-b4a5-8177c1915621}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="normal_cplusplus\3rd\md5">
-      <UniqueIdentifier>{81272fd5-1525-4b7e-ad06-eca91be6cd6b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="normal_cplusplus\3rd\base64">
-      <UniqueIdentifier>{55af93e0-4920-4ce5-a680-fc23532c1049}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="normal_cplusplus\3rd\GoogleProtoSerialize">
-      <UniqueIdentifier>{29b6fe7f-fea6-40f9-b411-a62b2a324531}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="normal_cplusplus\3rd\protobuf_test">
-      <UniqueIdentifier>{b7d7555f-d728-4560-9b2e-17daa82d352b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="normal_cplusplus\algorithm">
       <UniqueIdentifier>{d52acb4a-9792-40e3-8844-e592d8a40348}</UniqueIdentifier>
     </Filter>
@@ -213,30 +198,6 @@
     <ClCompile Include="others\getMusic163SongsCommentsInfo.cpp">
       <Filter>others</Filter>
     </ClCompile>
-    <ClCompile Include="3rd\tools.cpp">
-      <Filter>normal_cplusplus\3rd</Filter>
-    </ClCompile>
-    <ClCompile Include="3rd\md5\md5.cpp">
-      <Filter>normal_cplusplus\3rd\md5</Filter>
-    </ClCompile>
-    <ClCompile Include="3rd\md5\md5test.cpp">
-      <Filter>normal_cplusplus\3rd\md5</Filter>
-    </ClCompile>
-    <ClCompile Include="3rd\base64\base64.cpp">
-      <Filter>normal_cplusplus\3rd\base64</Filter>
-    </ClCompile>
-    <ClCompile Include="3rd\base64\test.cpp">
-      <Filter>normal_cplusplus\3rd\base64</Filter>
-    </ClCompile>
-    <ClCompile Include="3rd\GoogleProtoSerialize\SerializeProtoBufTest.cpp">
-      <Filter>normal_cplusplus\3rd\GoogleProtoSerialize</Filter>
-    </ClCompile>
-    <ClCompile Include="3rd\protobuf_test\lm.helloworld.pb.cc">
-      <Filter>normal_cplusplus\3rd\protobuf_test</Filter>
-    </ClCompile>
-    <ClCompile Include="3rd\protobuf_test\main.cpp">
-      <Filter>normal_cplusplus\3rd\protobuf_test</Filter>
-    </ClCompile>
     <ClCompile Include="algorithm\happyNumber.cpp">
       <Filter>normal_cplusplus\algorithm</Filter>
     </ClCompile>
@@ -248,22 +209,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="3rd\md5\md5.h">
-      <Filter>normal_cplusplus\3rd\md5</Filter>
-    </ClInclude>
-    <ClInclude Include="3rd\base64\base64.h">
-      <Filter>normal_cplusplus\3rd\base64</Filter>
-    </ClInclude>
-    <ClInclude Include="3rd\protobuf_test\lm.helloworld.pb.h">
-      <Filter>normal_cplusplus\3rd\protobuf_test</Filter>
-    </ClInclude>
     <ClInclude Include="cplusplus_common_def.hpp">
       <Filter>normal_cplusplus</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="3rd\protobuf_test\lm.helloworld.proto">
-      <Filter>normal_cplusplus\3rd\protobuf_test</Filter>
-    </None>
   </ItemGroup>
 </Project>
