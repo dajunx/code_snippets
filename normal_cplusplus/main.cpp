@@ -31,9 +31,10 @@
 #include "cpp_normal/va_start_va_end_va_list_test.h"
 #include "cpp_normal/virtual_usage.h"
 #include "cpp_normal/win_calculate_costs_time.h"
+#include "cpp_normal/is_digit.h"
 
 bool total_test() {
-  test_copy_array_data();
+  is_digit();
 
   return true;
 }

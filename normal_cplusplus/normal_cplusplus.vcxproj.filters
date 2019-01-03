@@ -94,6 +94,12 @@
       <Filter>cplusplus</Filter>
     </ClInclude>
     <ClInclude Include="cplusplus_common_def.hpp" />
+    <ClInclude Include="cpp_normal\is_digit.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_normal\self_define_exception.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

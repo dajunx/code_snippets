@@ -19,12 +19,14 @@
     <ClInclude Include="cpp_normal\delegate_test.h" />
     <ClInclude Include="cpp_normal\fflush_test.h" />
     <ClInclude Include="cpp_normal\fun_para_not_in_order.h" />
+    <ClInclude Include="cpp_normal\is_digit.h" />
     <ClInclude Include="cpp_normal\i_plusplus_i_operator.h" />
     <ClInclude Include="cpp_normal\load_file_content_into_pchar.h" />
     <ClInclude Include="cpp_normal\macro_FILE.h" />
     <ClInclude Include="cpp_normal\non_boost_bind_example.h" />
     <ClInclude Include="cpp_normal\non_boost_function_bind_usage.h" />
     <ClInclude Include="cpp_normal\random_shuffle_test.h" />
+    <ClInclude Include="cpp_normal\self_define_exception.h" />
     <ClInclude Include="cpp_normal\simple_file_read_and_write.h" />
     <ClInclude Include="cpp_normal\template_bind_test.h" />
     <ClInclude Include="cpp_normal\template_err_case1.h" />
