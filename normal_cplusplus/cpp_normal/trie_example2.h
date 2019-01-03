@@ -33,7 +33,7 @@ public:
     }
     //找到，获取数据，成功返回
     if (location != NULL && location->data != NULL) {
-      strcpy(entry, location->data);
+      strcpy_s(entry, 100, location->data);
       return 1;
     } else {
       return 0;
@@ -64,7 +64,7 @@ public:
 
     if (location->data == NULL) { //插入数据
       location->data = new char[strlen(entry) + 1];
-      strcpy(location->data, entry); //给data赋值表明单词存在
+      strcpy_s(location->data, strlen(entry) + 1, entry); //给data赋值表明单词存在
     }
   }
   int remove(const char *word, char *entry);

@@ -11,7 +11,7 @@ bool test_random() {
   int iSecret;
 
   /* initialize random seed: */
-  srand(time(NULL));
+  srand(static_cast<unsigned int>(time(NULL)));
 
   // 产生1~10随机数
   iSecret = rand() % 10 + 1;

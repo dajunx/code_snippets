@@ -29,7 +29,7 @@ void getInputDataFromBuf() {
   int a;
   char c;
 
-  scanf("%d", &a);
+  scanf_s("%d", &a);
   fflush(stdin); // 刷新缓冲区
   c = getchar();
   printf("a = %d, c = %c \n", a, c);

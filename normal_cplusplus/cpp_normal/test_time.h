@@ -8,6 +8,7 @@
 #include "cplusplus_common_def.hpp"
 
 bool test_time() {
+  char str[26];
   //系统的当前日历时间，自
   //1970年1月1日以来经过的秒数(时间戳)。如果系统没有时间，则返回 .1。 time_t
   // time(time_t *time);
@@ -17,25 +18,25 @@ bool test_time() {
 
   //该函数返回一个指向表示本地时间的 tm 结构的指针。
   // struct tm *localtime(const time_t *time);
-  struct tm *p_tm1;
-  p_tm1 = localtime(&tt);
+  struct tm *p_tm1 = NULL;
+  /*p_tm1 = */localtime_s(p_tm1, &tt);
 
   //该函数返回一个指向 time 的指针，time 为 tm
   //结构，用协调世界时（UTC）也被称为格林尼治标准时间（GMT）表示。 struct tm
   // *gmtime(const time_t *time);
   memset(p_tm1, 0, sizeof(struct tm));
-  p_tm1 = gmtime(&tt);
+  /*p_tm1 = */gmtime_s(p_tm1, &tt);
 
   //该返回一个表示当地时间的字符串指针，字符串形式 day month year
   //hours:minutes:seconds year\n\0。 char *ctime(const time_t *time);
   char *time_sz = (char *)malloc(sizeof(char) * 31);
-  time_sz = ctime(&tt);
+  /*time_sz = */ctime_s(str, sizeof(str), &tt);
 
   //该函数返回一个指向字符串的指针，字符串包含了 time 所指向结构中存储的信息，
   //  返回形式为：day month date hours:minutes:seconds year\n\0。
   // char * asctime ( const struct tm * time );
   memset(time_sz, 0, sizeof(char) * 31);
-  time_sz = asctime(p_tm1);
+  /*time_sz = */asctime_s(str, sizeof(str), p_tm1);
 
   //该函数返回日历时间，相当于 time 所指向结构中存储的时间
   // time_t mktime(struct tm *time);

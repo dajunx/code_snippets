@@ -76,7 +76,7 @@ bool test_trie_example1() {
 
   std::ifstream filein("word.txt");
   if (!filein.is_open()) {
-    return -1;
+    return false;
   }
 
   for (std::string line; std::getline(filein, line);) {

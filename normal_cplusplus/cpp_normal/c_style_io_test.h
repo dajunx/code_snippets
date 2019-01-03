@@ -55,7 +55,10 @@ void read_content_from_file2(FILE* fp, std::vector<char>& buf,
 }
 
 std::string read_whole_conent_from_file(std::string file_path) {
-  FILE* file = fopen(file_path.c_str(), "rb");
+  //FILE* file = fopen(file_path.c_str(), "rb");
+  FILE* file = NULL;
+  errno_t err;
+  err = fopen_s(&file, file_path.c_str(), "rb"); // 相比fopen多了返回错误码
   
   if (!file) {
     return std::string("");
@@ -100,15 +103,18 @@ bool test_c_style_io() {
   //要使用 wcout打印中文，必须设置，默认不输出中文
   setlocale(LC_ALL, "chs");
   std::vector<char> buf;
+  FILE* fpr = NULL;
+  FILE* fpw = NULL;
+  errno_t err;
   /*
   ** 读取文件内容
   */
   std::string file_name("reader.txt");
   // 1.方法1
   {
-    FILE* fpr = fopen(file_name.c_str(), "r");
+    err = fopen_s(&fpr, file_name.c_str(), "r");
     
-    if (fpr) {
+    if (err == 0) {
       read_content_from_file1(fpr, buf);
       buf.clear();
       read_content_from_file2(fpr, buf, 79);
@@ -123,9 +129,9 @@ bool test_c_style_io() {
   */
   {
     std::string write_file("writer.txt");
-    FILE* fpw = fopen(write_file.c_str(), "w");
+    err = fopen_s(&fpw, write_file.c_str(), "w");
     
-    if (fpw) {
+    if (err == 0) {
       std::string writes;
       conver_vec_char_2_string(buf, writes);
       write_contents_2_file(write_file, fpw, writes);
