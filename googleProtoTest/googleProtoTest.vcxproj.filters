@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="base64">
+      <UniqueIdentifier>{d705a635-4fa2-408a-b0c3-9b22a9fe5e1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="md5">
+      <UniqueIdentifier>{450706c4-0057-437d-8aad-74978a6fe301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protobuf">
+      <UniqueIdentifier>{0ac4ff63-6bcf-42d8-8c4f-5fe2e42a3a56}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3rd\base64\base64.cpp">
+      <Filter>base64</Filter>
+    </ClCompile>
+    <ClCompile Include="3rd\base64\test.cpp">
+      <Filter>base64</Filter>
+    </ClCompile>
+    <ClCompile Include="3rd\md5\md5.cpp">
+      <Filter>md5</Filter>
+    </ClCompile>
+    <ClCompile Include="3rd\md5\md5test.cpp">
+      <Filter>md5</Filter>
+    </ClCompile>
+    <ClCompile Include="3rd\SerializeProtoBufTest.cpp" />
+    <ClCompile Include="3rd\proto_config\lm.helloworld.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3rd\base64\base64.h">
+      <Filter>base64</Filter>
+    </ClInclude>
+    <ClInclude Include="3rd\md5\md5.h">
+      <Filter>md5</Filter>
+    </ClInclude>
+    <ClInclude Include="3rd\proto_config\lm.helloworld.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

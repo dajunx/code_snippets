@@ -1,0 +1,21 @@
+package lm;
+
+// 放于协议第二段
+// other server-->MEMDDB->DISPATCHER->CLIENTS
+message am_broadcast_raw_data_to_channel {
+  // 客户端对此ID，及相应的ID所对应的内容自行管理；
+  // 与同网络报的am_dispatch_raw_datas中的msg_id同；
+  required uint32      msg_id  = 1; 
+    
+  required uint64 top_channel_id = 2;  // 填写-1时，标示所有频道;
+
+  // am_dispatch_raw_datas  放于协议第三段
+};
+
+// 伴随于am_client_dispatch_raw_data_to_channel或am_dispatch_raw_data_to_channel
+// 放于协议第三段
+// 不分配命令字
+message am_dispatch_raw_datas {
+  optional uint32      msg_id  = 1; // 客户端对此ID，及相应的ID所对应的内容自行管理；
+  optional bytes         datas = 2; //客户端序列化之后的数据
+};
