@@ -115,4 +115,7 @@
 #include <boost/thread/lock_types.hpp> // unique_lock 头文件
 #include <boost/thread/shared_mutex.hpp> // shared_lock 需要
 
+// optional 头文件
+#include <boost/optional.hpp>
+
 //#undef BOOST_COMMON_HEADER

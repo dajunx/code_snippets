@@ -40,6 +40,7 @@
 #include "boost_normal/unified_com_client_M_test_stopfun_count.h"
 #include "boost_normal/virtual_fun_post_test.h"
 #include "boost_normal/wrap_usage.h"
+#include "boost_normal/optional_test.h"
 
 int total_test_fun() {
   test_boost_array();
