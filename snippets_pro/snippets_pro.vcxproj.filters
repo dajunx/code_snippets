@@ -28,9 +28,6 @@
     <Filter Include="others">
       <UniqueIdentifier>{5916e5d1-7f0a-40ab-8b63-17c3428a5f69}</UniqueIdentifier>
     </Filter>
-    <Filter Include="normal_cplusplus\interface">
-      <UniqueIdentifier>{bb6a2f8f-df06-4750-9162-6fada84a495f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="normal_cplusplus\design">
       <UniqueIdentifier>{a3e9896f-37d7-4860-865a-b3cd3bd22ff3}</UniqueIdentifier>
     </Filter>
@@ -114,15 +111,6 @@
     <ClCompile Include="cpp_template\scarce_usage.cpp">
       <Filter>normal_cplusplus\template</Filter>
     </ClCompile>
-    <ClCompile Include="cpp_interface\mysql_connector_cplusplus_use_procedure.cpp">
-      <Filter>normal_cplusplus\interface</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_interface\mysql_multi_thread_conn_test.cpp">
-      <Filter>normal_cplusplus\interface</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_interface\mysql_connector_cplusplus_conn_select_test.cpp">
-      <Filter>normal_cplusplus\interface</Filter>
-    </ClCompile>
     <ClCompile Include="cpp_design\Observer.cpp">
       <Filter>normal_cplusplus\design</Filter>
     </ClCompile>
@@ -146,9 +134,6 @@
     </ClCompile>
     <ClCompile Include="thread_win\thread_semaphore.cpp">
       <Filter>normal_cplusplus\thread_win</Filter>
-    </ClCompile>
-    <ClCompile Include="cpp_interface\mysql_connector_direct.cpp">
-      <Filter>normal_cplusplus\interface</Filter>
     </ClCompile>
     <ClCompile Include="others\test_execute_3rd_process.cpp">
       <Filter>others</Filter>

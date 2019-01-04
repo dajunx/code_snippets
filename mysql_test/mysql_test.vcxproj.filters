@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="direct">
+      <UniqueIdentifier>{14d61e38-2412-4f2a-a6b9-3c3dd5e883c2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="direct\mysql_multi_thread_conn_test.cpp">
+      <Filter>direct</Filter>
+    </ClCompile>
+    <ClCompile Include="direct\mysql_connector_cplusplus_conn_select_test.cpp">
+      <Filter>direct</Filter>
+    </ClCompile>
+    <ClCompile Include="direct\mysql_connector_cplusplus_use_procedure.cpp">
+      <Filter>direct</Filter>
+    </ClCompile>
+    <ClCompile Include="direct\mysql_connector_direct.cpp">
+      <Filter>direct</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,4 +1,5 @@
 ﻿
+//注：dll文件依赖于 libmysql 而非 libmysqld
 //32位版本 直接连接 mysql，不使用 第三方库测试
 #include <Windows.h>
 #include <iostream>
@@ -12,8 +13,8 @@ int main() {
   MYSQL_ROW row;
 
   // database configuartion
-  std::string userName("kaka"), pwd(""), loginIp("192.168.221.138");
-  std::string databaseName("test"), tablename("test");
+  std::string userName("root"), pwd(""), loginIp("127.0.0.1");
+  std::string databaseName("test"), tablename("test1");
   int loginPort = 3306;
   char *query = NULL;
   bool err = true;
@@ -23,6 +24,7 @@ int main() {
 
   do {
     if (conn == NULL) {
+      std::cout<<"err info:" << mysql_errno(conn) << std::endl;
       break;
     }
 
@@ -39,7 +41,7 @@ int main() {
     }
 
     conn->reconnect = 1;
-    query = "SELECT * FROM test";
+    query = "SELECT * FROM test1";
 
     //执行查询
     if (mysql_real_query(conn, query, strlen(query))) {

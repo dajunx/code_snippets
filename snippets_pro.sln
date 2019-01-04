@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "normal_cplusplus", "normal_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "googleProtoTest", "googleProtoTest\googleProtoTest.vcxproj", "{A80EAF5E-0C26-441D-B10A-2D1222CAD77D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mysql_test", "mysql_test\mysql_test.vcxproj", "{3FB4F87B-522E-4A3C-95BD-A2F4C0723294}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -31,6 +33,10 @@ Global
 		{A80EAF5E-0C26-441D-B10A-2D1222CAD77D}.Debug|Win32.Build.0 = Debug|Win32
 		{A80EAF5E-0C26-441D-B10A-2D1222CAD77D}.Release|Win32.ActiveCfg = Release|Win32
 		{A80EAF5E-0C26-441D-B10A-2D1222CAD77D}.Release|Win32.Build.0 = Release|Win32
+		{3FB4F87B-522E-4A3C-95BD-A2F4C0723294}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3FB4F87B-522E-4A3C-95BD-A2F4C0723294}.Debug|Win32.Build.0 = Debug|Win32
+		{3FB4F87B-522E-4A3C-95BD-A2F4C0723294}.Release|Win32.ActiveCfg = Release|Win32
+		{3FB4F87B-522E-4A3C-95BD-A2F4C0723294}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

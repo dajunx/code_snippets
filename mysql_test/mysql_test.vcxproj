@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DA671CB1-0ADF-4EE1-BCDE-D63870E22A73}</ProjectGuid>
+    <ProjectGuid>{3FB4F87B-522E-4A3C-95BD-A2F4C0723294}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>snippets_pro</RootNamespace>
+    <RootNamespace>mysql_test</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -39,6 +39,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)../../3rd_lib/mysql-5.7.21-win32/include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)../../3rd_lib/mysql-5.7.21-win32/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -54,6 +56,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -74,56 +77,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="algorithm\happyNumber.cpp" />
-    <ClCompile Include="cpp_design\Observer.cpp" />
-    <ClCompile Include="cpp_design\SimpleFactoryPatternDemo.cpp" />
-    <ClCompile Include="cpp_network\epoll\net_epoll_client.cpp" />
-    <ClCompile Include="cpp_network\epoll\net_epoll_server.cpp" />
-    <ClCompile Include="cpp_network\normal\net_normal_client.cpp" />
-    <ClCompile Include="cpp_network\normal\net_normal_server.cpp" />
-    <ClCompile Include="cpp_network\poll\net_poll_client.cpp" />
-    <ClCompile Include="cpp_network\poll\net_poll_keyboard.cpp" />
-    <ClCompile Include="cpp_network\poll\net_poll_server.cpp" />
-    <ClCompile Include="cpp_network\select\net_select_client.cpp" />
-    <ClCompile Include="cpp_network\select\net_select_keyboard.cpp" />
-    <ClCompile Include="cpp_network\select\net_select_server.cpp" />
-    <ClCompile Include="cpp_network\select\net_select_test.cpp" />
-    <ClCompile Include="cpp_network\select\net_select_web_server.cpp" />
-    <ClCompile Include="cpp_network\select_module_keyboard.cpp" />
-    <ClCompile Include="cpp_stl\test_map_userdef_sort.cpp" />
-    <ClCompile Include="cpp_stl\vector_iterator_err.cpp" />
-    <ClCompile Include="cpp_stl\vector_speed_by_set_capacity.cpp" />
-    <ClCompile Include="cpp_stl\vector_test.cpp" />
-    <ClCompile Include="cpp_template\cplusplus_class_template.cpp" />
-    <ClCompile Include="cpp_template\scarce_usage.cpp" />
-    <ClCompile Include="cpp_template\template_keyword_typename.cpp" />
-    <ClCompile Include="cpp_template\typedef_combine_template_err.cpp" />
-    <ClCompile Include="cpp_template\typedef_typename_usage.cpp" />
-    <ClCompile Include="others\getMusic163SongsCommentsInfo.cpp" />
-    <ClCompile Include="others\log4cplus_test.cpp" />
-    <ClCompile Include="others\map_erase_element_effective.cpp" />
-    <ClCompile Include="others\msg_dispatch.cpp" />
-    <ClCompile Include="others\parse_json_contents_to_simple_text.cpp" />
-    <ClCompile Include="others\rapidjson_test.cpp" />
-    <ClCompile Include="others\test_execute_3rd_process.cpp" />
-    <ClCompile Include="process_linux\simple_process.c" />
-    <ClCompile Include="thread_linux\ChangeUnThreadSafeFun.c" />
-    <ClCompile Include="thread_linux\inputdata_and_localdata_threasafe.c" />
-    <ClCompile Include="thread_linux\postFun2Thread.c" />
-    <ClCompile Include="thread_linux\prod_condvar.c" />
-    <ClCompile Include="thread_linux\prod_no_condvar.c" />
-    <ClCompile Include="thread_linux\simple_thread.c" />
-    <ClCompile Include="thread_linux\thread_1w_multiR.c" />
-    <ClCompile Include="thread_linux\thread_call_classFun.c" />
-    <ClCompile Include="thread_linux\thread_incr.c" />
-    <ClCompile Include="thread_linux\thread_incr_mutex.c" />
-    <ClCompile Include="thread_linux\thread_multijoin.c" />
-    <ClCompile Include="thread_win\Inter_operate_shareddata.cpp" />
-    <ClCompile Include="thread_win\simple_thread_create_close.cpp" />
-    <ClCompile Include="thread_win\thread_Event.cpp" />
-    <ClCompile Include="thread_win\thread_Section.cpp" />
-    <ClCompile Include="thread_win\thread_semaphore.cpp" />
-    <ClInclude Include="cplusplus_common_def.hpp" />
+    <ClCompile Include="direct\mysql_connector_cplusplus_conn_select_test.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="direct\mysql_connector_cplusplus_use_procedure.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="direct\mysql_connector_direct.cpp" />
+    <ClCompile Include="direct\mysql_multi_thread_conn_test.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
