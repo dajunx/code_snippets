@@ -100,7 +100,8 @@
 #include <boost/type_traits/detail\wrap.hpp>
 
 // 用户自定义头文件
-#include "E:\Work\iSpeak\common\sdk\utilities\inc\bind_weak_ptr.hpp"
+//#include "E:\Work\iSpeak\common\sdk\utilities\inc\bind_weak_ptr.hpp"
+#include "bind_weak_ptr.hpp"
 
 // operator+=()
 #include <boost/assign/std/vector.hpp>

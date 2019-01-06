@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="boost\bind_weak_ptr.hpp" />
     <ClInclude Include="boost\boost_common.h" />
     <ClInclude Include="boost\boost_multi_thread\call_once.h" />
     <ClInclude Include="boost\boost_multi_thread\condition_test.h" />

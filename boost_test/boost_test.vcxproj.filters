@@ -171,6 +171,9 @@
     <ClInclude Include="boost\boost_normal\optional_test.h">
       <Filter>boost\boost</Filter>
     </ClInclude>
+    <ClInclude Include="boost\bind_weak_ptr.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="boost\main.cpp" />
