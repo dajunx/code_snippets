@@ -17,13 +17,17 @@ void parse_string(std::string& input, const std::string& str_sep) {
   tokenizer::iterator it = tokens.begin();
   for (;it!=tokens.end();++it)
   {
-    std::cout<<"sub string, content: " << *it << std::endl;
+    try {
+      std::cout<<"sub string, content: " << boost::lexical_cast<boost::uint64_t>(*it) << std::endl;
+    } catch (boost::bad_lexical_cast& a) {
+      std::cout<<"err: "<<a.what()<<std::endl;
+    }
   }
 }
 
 bool use_tokenizer_lib_parse_string() {
-  const std::string sep(":");
-  std::string target_string("1:2,2,2");
+  const std::string sep(",:");
+  std::string target_string("100003696:0,88400.0");
   parse_string(target_string, sep);
 
   target_string = "";

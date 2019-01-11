@@ -44,6 +44,7 @@
 
 int total_test_fun() {
   test_boost_array();
+  use_tokenizer_lib_parse_string();
 
   return true;
 }
