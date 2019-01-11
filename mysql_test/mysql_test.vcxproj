@@ -39,8 +39,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)../../3rd_lib/mysql-5.7.21-win32/include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)../../3rd_lib/mysql-5.7.21-win32/lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)../../3rd_lib/mysql-connector-c++1.1.11;$(ProjectDir)../../3rd_lib/boost_1_53_0;$(ProjectDir)../../3rd_lib/mysql-5.7.21-win32/include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)../../3rd_lib/mysql-5.7.21-win32/lib;$(ProjectDir)../../3rd_lib/boost_1_53_0/stage/lib;$(ProjectDir)../../3rd_lib/mysql-connector-c++1.1.11/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -56,7 +56,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libmysql.lib;mysqlcppconn.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -77,13 +77,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="direct\mysql_connector_cplusplus_conn_select_test.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="direct\mysql_connector_cplusplus_conn_select_test.cpp" />
     <ClCompile Include="direct\mysql_connector_cplusplus_use_procedure.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="direct\mysql_connector_direct.cpp" />
+    <ClCompile Include="direct\mysql_connector_direct.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="direct\mysql_multi_thread_conn_test.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

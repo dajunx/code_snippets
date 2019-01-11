@@ -14,7 +14,7 @@ int main() {
 
   // database configuartion
   std::string userName("root"), pwd(""), loginIp("127.0.0.1");
-  std::string databaseName("test"), tablename("test1");
+  std::string databaseName("test");
   int loginPort = 3306;
   char *query = NULL;
   bool err = true;

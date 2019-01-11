@@ -1,8 +1,5 @@
-﻿// mysql-connector-c++  连接/查询mysql
-//暂时用的3rd库里面的动态库进行编译
-
-//使用lib：  F:\Work\3rd\mysql-connector-c++\build\driver\Debug
-
+﻿
+// mysql-connector-c++  连接/查询mysql
 #include <cppconn/driver.h>
 #include <cppconn/exception.h>
 #include <cppconn/resultset.h>
@@ -11,13 +8,12 @@
 using namespace std;
 
 int main() {
-  // TODO 指针都没有设置初值！！！
   try {
-    sql::Driver *driver;
-    sql::Connection *con;
-    sql::Statement *stmt;
-    sql::ResultSet *res;
-    sql::PreparedStatement *pstmt;
+    sql::Driver *driver = NULL;
+    sql::Connection *con = NULL;
+    sql::Statement *stmt = NULL;
+    sql::ResultSet *res = NULL;
+    sql::PreparedStatement *pstmt = NULL;
 
     driver = get_driver_instance();
     con = driver->connect("localhost", "root", "");
@@ -30,9 +26,10 @@ int main() {
     //遍历结果集
     while (res->next()) {
       //这里的ID是user表中的字段名
-      int id = res->getInt("ID");
+      int id = res->getInt("uid");
       cout << id << endl;
     }
+
     delete res;
     delete stmt;
     delete con;
