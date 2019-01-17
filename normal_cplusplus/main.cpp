@@ -32,6 +32,7 @@
 #include "cpp_normal/virtual_usage.h"
 #include "cpp_normal/win_calculate_costs_time.h"
 #include "cpp_normal/is_digit.h"
+#include "cpp_normal/string_strtok.h"
 
 bool total_test() {
   is_digit();

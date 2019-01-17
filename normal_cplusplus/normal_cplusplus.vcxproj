@@ -28,6 +28,7 @@
     <ClInclude Include="cpp_normal\random_shuffle_test.h" />
     <ClInclude Include="cpp_normal\self_define_exception.h" />
     <ClInclude Include="cpp_normal\simple_file_read_and_write.h" />
+    <ClInclude Include="cpp_normal\string_strtok.h" />
     <ClInclude Include="cpp_normal\template_bind_test.h" />
     <ClInclude Include="cpp_normal\template_err_case1.h" />
     <ClInclude Include="cpp_normal\test_another_new.h" />

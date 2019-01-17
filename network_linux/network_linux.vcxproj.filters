@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="network">
+      <UniqueIdentifier>{2c61c0d8-0e6c-4ce1-b7cd-7f5543c54f03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\normal">
+      <UniqueIdentifier>{a2a8f58e-3aca-474f-942c-c7902341a173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\epoll">
+      <UniqueIdentifier>{68b812eb-7afb-42ef-94de-79368a789f76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\poll">
+      <UniqueIdentifier>{71615025-c74e-4574-9532-97ae407916d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\select">
+      <UniqueIdentifier>{e25f0e80-4bd1-4c58-bf9e-1673e9485889}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="network\poll\net_poll_keyboard.cpp">
+      <Filter>network\poll</Filter>
+    </ClCompile>
+    <ClCompile Include="network\select\net_select_test.cpp">
+      <Filter>network\select</Filter>
+    </ClCompile>
+    <ClCompile Include="network\select\net_select_web_server.cpp">
+      <Filter>network\select</Filter>
+    </ClCompile>
+    <ClCompile Include="network\select\net_select_keyboard.cpp">
+      <Filter>network\select</Filter>
+    </ClCompile>
+    <ClCompile Include="network\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="network\select_module_keyboard.h" />
+    <ClInclude Include="network\epoll\net_epoll_client.h">
+      <Filter>network\epoll</Filter>
+    </ClInclude>
+    <ClInclude Include="network\epoll\net_epoll_server.h">
+      <Filter>network\epoll</Filter>
+    </ClInclude>
+    <ClInclude Include="network\normal\net_normal_client.h">
+      <Filter>network\normal</Filter>
+    </ClInclude>
+    <ClInclude Include="network\normal\net_normal_server.h">
+      <Filter>network\normal</Filter>
+    </ClInclude>
+    <ClInclude Include="network\poll\net_poll_client.h">
+      <Filter>network\poll</Filter>
+    </ClInclude>
+    <ClInclude Include="network\poll\net_poll_server.h">
+      <Filter>network\poll</Filter>
+    </ClInclude>
+    <ClInclude Include="network\select\net_select_client.h">
+      <Filter>network\select</Filter>
+    </ClInclude>
+    <ClInclude Include="network\select\net_select_server.h">
+      <Filter>network\select</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

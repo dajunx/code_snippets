@@ -26,3 +26,7 @@
 #include <boost/make_shared.hpp>
 #include <boost/shared_ptr.hpp>
 //#include <boost/bind/placeholders.hpp>
+
+// c string parse strtok() header
+#include <stdio.h>
+#include <string.h>
