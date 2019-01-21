@@ -4,5 +4,7 @@
     <RemoteDebuggerCommandArguments>
     </RemoteDebuggerCommandArguments>
     <DebuggerFlavor>LinuxDebugger</DebuggerFlavor>
+    <RemoteDebuggerWorkingDirectory>
+    </RemoteDebuggerWorkingDirectory>
   </PropertyGroup>
 </Project>
