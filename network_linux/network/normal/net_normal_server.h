@@ -13,7 +13,7 @@
 // typedef struct sockaddr  SA;
 void handle_net_normal_server(int connfd);
 
-bool test_net_noraml_server(int argc, char **argv) {
+bool test_net_noraml_server(/*int argc, char **argv*/) {
   int listenfd, connfd;
   int serverPort = 6888;
   int listenq = 1024;
