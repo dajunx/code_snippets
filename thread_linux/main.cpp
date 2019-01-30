@@ -14,7 +14,6 @@
 // 自有的多线程示例
 #include "thread_call_classFun.h"
 #include "postFun2Thread.h"
-#include "inputdata_and_localdata_threasafe.h"
 
 void test_thread() {
   // 简单实用Linux 线程
@@ -37,9 +36,6 @@ void test_thread() {
 
   // 条件变量运用
   //test_post_fun2thread();
-
-  // 
-  test_inputdata_and_localdata_thread_safe();
 }
 
 int main() {
