@@ -91,7 +91,6 @@
     <LocalRemoteCopySources>true</LocalRemoteCopySources>
   </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="inputdata_and_localdata_threasafe.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="postFun2Thread.h" />
     <ClCompile Include="thread_call_classFun.h" />
