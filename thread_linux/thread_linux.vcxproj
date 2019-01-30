@@ -91,9 +91,14 @@
     <LocalRemoteCopySources>true</LocalRemoteCopySources>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="inputdata_and_localdata_threasafe.h" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="postFun2Thread.h" />
+    <ClCompile Include="thread_call_classFun.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="prod_condvar.h" />
+    <ClInclude Include="prod_no_condvar.h" />
     <ClInclude Include="simple_thread.h" />
     <ClInclude Include="thread_incr.h" />
     <ClInclude Include="thread_incr_mutex.h" />

@@ -7,54 +7,31 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <vector>
+
 typedef void (*FUN)(int);
 static std::deque<FUN> MsgDeq; //共享消息队列
 std::vector<int> vec_thread_datas;
 static bool post_event_finished = false;
-static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
-static pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
+static pthread_mutex_t mutex_postFun2Thread = PTHREAD_MUTEX_INITIALIZER;
+static pthread_cond_t cond_postFun2Thread = PTHREAD_COND_INITIALIZER;
 
-class c_mutex {
-public:
-  c_mutex() { pthread_mutex_lock(&mutex); }
-  ~c_mutex() { pthread_mutex_unlock(&mutex); }
-};
 // loop线程
-void *fun2(void *arg) {
+void *test_postFun2Thread_fun(void *arg) {
   std::deque<FUN>::iterator it;
   int input_cb_data = 0;
   while (true) {
-    pthread_mutex_lock(&mutex);
+    pthread_mutex_lock(&mutex_postFun2Thread);
     // 条件变量使用例子，
     // 条件变量的使用目的也是避免消费者平凡去尝试加锁查看是否又新数据到来
     while (MsgDeq.empty()) {
-      pthread_cond_wait(&cond, &mutex);
+      pthread_cond_wait(&cond_postFun2Thread, &mutex_postFun2Thread);
     }
 
     it = MsgDeq.begin();
     (*(*it))(input_cb_data++);
     MsgDeq.pop_front();
-    pthread_mutex_unlock(&mutex);
+    pthread_mutex_unlock(&mutex_postFun2Thread);
 
-    if (post_event_finished == true && true == MsgDeq.empty()) {
-      break;
-    }
-  }
-  return (void *)0;
-}
-
-void *fun1(void *arg) {
-  std::deque<FUN>::iterator it;
-  int input_cb_data = 0;
-  while (true) {
-    if (false == MsgDeq.empty()) {
-      c_mutex t;
-      it = MsgDeq.begin();
-      (*(*it))(input_cb_data++);
-      MsgDeq.pop_front();
-    } else {
-      // printf("thread empty loop\n");
-    }
     if (post_event_finished == true && true == MsgDeq.empty()) {
       break;
     }
@@ -65,24 +42,23 @@ void *fun1(void *arg) {
 void show_callback(int i) { vec_thread_datas.push_back(i); }
 void post() { MsgDeq.push_back(&show_callback); }
 
-int main() {
-  pthread_t t1, t2;
+int test_post_fun2thread() {
+  pthread_t t1;
   void *res;
   int s;
 
-  s = pthread_create(&t1, NULL, fun2, NULL);
-  // s = pthread_create(&t2, NULL, fun2, NULL);
+  s = pthread_create(&t1, NULL, test_postFun2Thread_fun, NULL);
 
   // 在主线程投递请求
   for (int i = 0; i < 1000000; i++) {
-    c_mutex t;
-    pthread_cond_signal(&cond);
+    pthread_mutex_lock(&mutex_postFun2Thread);
+    pthread_cond_signal(&cond_postFun2Thread);
     post();
+    pthread_mutex_unlock(&mutex_postFun2Thread);
   }
   post_event_finished = true;
 
   s = pthread_join(t1, &res);
-  // s = pthread_join(t2, &res);
 
   // 打印线程处理完的归总数据
   std::vector<int>::iterator it = vec_thread_datas.begin();

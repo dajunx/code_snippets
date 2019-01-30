@@ -4,14 +4,11 @@
   非static成员，必须传递类对象进来
   参考链接：https://stackoverflow.com/questions/1151582/pthread-function-from-a-class
 */
-#include <iostream>
-#include <pthread.h>
-#include <unistd.h>
 
-class test1 {
+class test_call_class {
 public:
   static void *fun1(void *arg) {
-    test1 *p1 = (test1 *)arg;
+    test_call_class *p1 = (test_call_class *)arg;
     std::cout << "fun1 called." << std::endl;
     p1->show();
     return (void *)0;
@@ -19,13 +16,13 @@ public:
   void show() { std::cout << "show call" << std::endl; }
 };
 
-int main() {
+int test_call_classFun() {
   pthread_t t1;
   void *res;
   int s;
 
-  test1 tt1;
-  s = pthread_create(&t1, NULL, &test1::fun1, &tt1);
+  test_call_class tt1;
+  s = pthread_create(&t1, NULL, &test_call_class::fun1, &tt1);
   s = pthread_join(t1, &res);
 
   return 0;

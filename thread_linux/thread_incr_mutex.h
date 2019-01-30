@@ -6,8 +6,8 @@
 static volatile int glob_mutex = 0;
 static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
 
-static void * /* Loop 'arg' times incrementing 'glob' */
-threadFunc_use_lock(void *arg) {
+/* Loop 'arg' times incrementing 'glob' */
+static void * threadFunc_use_lock(void *arg) {
   int loops = *((int *)arg);
   int loc, j, s;
 
