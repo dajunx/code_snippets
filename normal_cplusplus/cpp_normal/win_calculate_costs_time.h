@@ -1,4 +1,5 @@
 ﻿//在windows端 精确计算 时间间隔
+// 参考链接：http://blog.csdn.net/midle110/article/details/8068014
 
 #include "cplusplus_common_def.hpp"
 // header file.
