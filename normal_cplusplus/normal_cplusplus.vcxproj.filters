@@ -103,6 +103,9 @@
     <ClInclude Include="cpp_normal\string_strtok.h">
       <Filter>cplusplus</Filter>
     </ClInclude>
+    <ClInclude Include="cpp_normal\set_console_text_color.h">
+      <Filter>cplusplus</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
