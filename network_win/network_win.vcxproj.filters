@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="normal_tcp">
+      <UniqueIdentifier>{7659c6f7-6c4c-4923-ae28-ad8329a1ffe3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="client.h">
+      <Filter>normal_tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="server.h">
+      <Filter>normal_tcp</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

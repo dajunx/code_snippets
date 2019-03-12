@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "network_linux", "network_li
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "thread_linux", "thread_linux\thread_linux.vcxproj", "{E9C179DE-FAA6-4183-8A0B-9C26FD227CDB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "network_win", "network_win\network_win.vcxproj", "{98667195-8123-4D35-A547-88EDEA2AC0E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -111,6 +113,18 @@ Global
 		{E9C179DE-FAA6-4183-8A0B-9C26FD227CDB}.Release|Win32.Build.0 = Release|x86
 		{E9C179DE-FAA6-4183-8A0B-9C26FD227CDB}.Release|x64.ActiveCfg = Release|x64
 		{E9C179DE-FAA6-4183-8A0B-9C26FD227CDB}.Release|x64.Build.0 = Release|x64
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Debug|ARM.ActiveCfg = Debug|Win32
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Debug|ARM64.ActiveCfg = Debug|Win32
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Debug|Win32.Build.0 = Debug|Win32
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Debug|x64.ActiveCfg = Debug|x64
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Debug|x64.Build.0 = Debug|x64
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Release|ARM.ActiveCfg = Release|Win32
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Release|ARM64.ActiveCfg = Release|Win32
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Release|Win32.ActiveCfg = Release|Win32
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Release|Win32.Build.0 = Release|Win32
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Release|x64.ActiveCfg = Release|x64
+		{98667195-8123-4D35-A547-88EDEA2AC0E9}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
