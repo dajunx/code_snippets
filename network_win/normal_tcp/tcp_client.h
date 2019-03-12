@@ -22,7 +22,7 @@ void showSubNetErr(bool& continueConn)
   }
 }
 
-int handle_client()
+int handle_tcp_client()
 {
   WORD sockVersion = MAKEWORD(2, 2);
   WSADATA data;

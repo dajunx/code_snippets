@@ -119,8 +119,10 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="client.h" />
-    <ClInclude Include="server.h" />
+    <ClInclude Include="normal_tcp\tcp_client.h" />
+    <ClInclude Include="normal_tcp\tcp_server.h" />
+    <ClInclude Include="normal_udp\udp_client.h" />
+    <ClInclude Include="normal_udp\udp_server.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

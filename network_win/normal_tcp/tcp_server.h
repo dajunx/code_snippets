@@ -30,7 +30,7 @@ DWORD WINAPI HandleClientMsg(LPVOID lpParameter) {
   return 0L;
 }
 
-int handle_server()
+int handle_tcp_server()
 {
   //≥ı ºªØWSA
   WORD sockVersion = MAKEWORD(2, 2);
