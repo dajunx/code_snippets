@@ -34,6 +34,14 @@ bool test_net_noraml_server(/*int argc, char **argv*/) {
     perror("socket error");
     return -1;
   }
+
+  // 处理 address already in use. 错误
+  int enable = 1;
+  if (setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, &enable, sizeof(int)) < 0) {
+    perror("setsockopt(SO_REUSEADDR) failed");
+    return -1;
+  }
+
   if (bind(listenfd, (struct sockaddr *)&servaddr, socklen) < 0) {
     perror("bind error");
     return -1;
@@ -54,9 +62,9 @@ bool test_net_noraml_server(/*int argc, char **argv*/) {
             cliaddr.sin_port);
     printf(buf, "");
     childpid = fork();
-    if (childpid == 0) { /* child process */
-      close(listenfd);   /* close listening socket */
-	  handle_net_normal_server(connfd);    /* process the request */
+    if (childpid == 0) {                /* child process */
+      close(listenfd);                  /* close listening socket */
+      handle_net_normal_server(connfd); /* process the request */
       exit(0);
     } else if (childpid > 0) {
       close(connfd); /* parent closes connected socket */
