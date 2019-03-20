@@ -27,16 +27,15 @@ int setnonblocking(int sockfd) {
 bool test_net_epoll_server() {
   int servPort = 88960;
   int listenq = 1024;
-  int listenfd, connfd, kdpfd, nfds, n, nread, curfds, acceptCount = 0;
+  int listenfd, connfd, epoll_create_fd, current_fd_num, acceptCount = 0;
   struct sockaddr_in servaddr, cliaddr;
   socklen_t socklen = sizeof(struct sockaddr_in);
   struct epoll_event ev;
   struct epoll_event events[MAXEPOLLSIZE];
-  struct rlimit rt;
-  char buf[MAXLINE];
-  /* 设置每个进程允许打开的最大文件数 */
-  rt.rlim_max = rt.rlim_cur = MAXEPOLLSIZE;
 
+  /* 设置每个进程允许打开的最大文件数 */
+  struct rlimit rt;
+  rt.rlim_max = rt.rlim_cur = MAXEPOLLSIZE;
   if (setrlimit(RLIMIT_NOFILE, &rt) == -1) {
     perror("setrlimit error");
     return -1;
@@ -76,30 +75,33 @@ bool test_net_epoll_server() {
   }
 
   /* 创建 epoll 句柄，把监听 socket 加入到 epoll 集合里 */
-  kdpfd = epoll_create(MAXEPOLLSIZE);
+  epoll_create_fd = epoll_create(MAXEPOLLSIZE);
   ev.events = EPOLLIN | EPOLLET;
   ev.data.fd = listenfd;
 
-  if (epoll_ctl(kdpfd, EPOLL_CTL_ADD, listenfd, &ev) < 0) {
+  if (epoll_ctl(epoll_create_fd, EPOLL_CTL_ADD, listenfd, &ev) < 0) {
     fprintf(stderr, "epoll set insertion error: fd=%d\n", listenfd);
     return -1;
   }
 
-  curfds = 1;
+  current_fd_num = 1;
   printf("epollserver startup,port %d, max connection is %d, backlog is %d\n",
          servPort, MAXEPOLLSIZE, listenq);
 
   for (;;) {
     /* 等待有事件发生 */
-    nfds = epoll_wait(kdpfd, events, curfds, -1);
 
-    if (nfds == -1) {
+    int ready_fd_num = -1; // 存放I/O上已准备好的文件描述符数目;
+    ready_fd_num = epoll_wait(epoll_create_fd, events, current_fd_num, -1);
+
+    if (ready_fd_num == -1) {
       perror("epoll_wait");
       continue;
     }
 
     /* 处理所有事件 */
-    for (n = 0; n < nfds; ++n) {
+    for (int n = 0; n < ready_fd_num; ++n) {
+      // 新客户端连入
       if (events[n].data.fd == listenfd) {
         connfd = accept(listenfd, (struct sockaddr *)&cliaddr, &socklen);
 
@@ -108,11 +110,12 @@ bool test_net_epoll_server() {
           continue;
         }
 
+        char buf[MAXLINE];
         sprintf(buf, "accept form %s:%d\n", inet_ntoa(cliaddr.sin_addr),
                 cliaddr.sin_port);
-        printf("%d:%s", ++acceptCount, buf);
+        printf("acceptCount-> %d:%s", ++acceptCount, buf);
 
-        if (curfds >= MAXEPOLLSIZE) {
+        if (current_fd_num >= MAXEPOLLSIZE) {
           fprintf(stderr, "too many connection, more than %d\n", MAXEPOLLSIZE);
           close(connfd);
           continue;
@@ -125,20 +128,20 @@ bool test_net_epoll_server() {
         ev.events = EPOLLIN | EPOLLET;
         ev.data.fd = connfd;
 
-        if (epoll_ctl(kdpfd, EPOLL_CTL_ADD, connfd, &ev) < 0) {
+        if (epoll_ctl(epoll_create_fd, EPOLL_CTL_ADD, connfd, &ev) < 0) {
           fprintf(stderr, "add socket '%d' to epoll failed: %s\n", connfd,
                   strerror(errno));
           return -1;
         }
 
-        curfds++;
+        current_fd_num++;
         continue;
       }
 
       // 处理客户端请求
       if (handle_net_epoll_server(events[n].data.fd) < 0) {
-        epoll_ctl(kdpfd, EPOLL_CTL_DEL, events[n].data.fd, &ev);
-        curfds--;
+        epoll_ctl(epoll_create_fd, EPOLL_CTL_DEL, events[n].data.fd, &ev);
+        current_fd_num--;
       }
     }
   }
