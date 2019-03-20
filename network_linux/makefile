@@ -1,6 +1,7 @@
 CC=g++
 CFLAGS=-I./network/normal
-DEPS = network/normal/net_normal_client.h network/normal/net_normal_server.h
+DEPS = network/normal/net_normal_client.h network/normal/net_normal_server.h \
+	   network/select/net_select_client.h network/select/net_select_server.h
 
 main: network/main.o
 	$(CC) -g -o main network/main.o  -lpthread
