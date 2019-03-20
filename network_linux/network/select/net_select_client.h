@@ -51,20 +51,22 @@ bool test_select_client(/*int argc, char **argv*/) {
 void handle_select_client(int connfd) {
   FILE *fp = stdin;
   char sendline[MAXLINE], recvline[MAXLINE];
-  fd_set rset;
-  FD_ZERO(&rset);
+  fd_set all_fds;
+  FD_ZERO(&all_fds);
   int maxfds = max(fileno(fp), connfd) + 1;
   int nread;
-  for (;;) {
-    FD_SET(fileno(fp), &rset);
-    FD_SET(connfd, &rset);
 
-    if (select(maxfds, &rset, NULL, NULL, NULL) == -1) {
+  for (;;) {
+    FD_SET(fileno(fp), &all_fds);
+    FD_SET(connfd, &all_fds);
+
+    if (select(maxfds, &all_fds, NULL, NULL, NULL) == -1) {
       perror("select error");
       continue;
     }
 
-    if (FD_ISSET(connfd, &rset)) {
+    // 响应服务端传输数据
+    if (FD_ISSET(connfd, &all_fds)) {
       //接收到服务器响应
       nread = read(connfd, recvline, MAXLINE);
       if (nread == 0) {
@@ -79,7 +81,8 @@ void handle_select_client(int connfd) {
       }
     }
 
-    if (FD_ISSET(fileno(fp), &rset)) {
+    // 收到键盘输入事件，发送输入数据到服务端
+    if (FD_ISSET(fileno(fp), &all_fds)) {
       //标准输入可读
       if (fgets(sendline, MAXLINE, fp) == NULL) {
         // eof exit
