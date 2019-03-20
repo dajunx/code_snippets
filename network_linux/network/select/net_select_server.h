@@ -24,7 +24,8 @@ bool test_net_select_server(/*int argc, char **argv*/) {
   socklen_t socklen = sizeof(struct sockaddr_in);
   int nready, nread;
   char buf[MAXLINE];
-  int accept_fds[FD_SETSIZE];    // 容纳有变化的客户端连接fd ???
+  int accept_fds[FD_SETSIZE];    // 容纳连接上的客户端fd，供后续网络传输数据
+  memset(accept_fds, -1, sizeof(int)*FD_SETSIZE); // 由for循环初始化数组方式改为memset，效率高
   fd_set allset, changed_fd_set; // 1.定义 select模型的结构体;
   int maxfd;
 
@@ -55,11 +56,6 @@ bool test_net_select_server(/*int argc, char **argv*/) {
     return -1;
   }
 
-  /// TODO ?
-  for (int i = 0; i < FD_SETSIZE; i++) {
-    accept_fds[i] = -1;
-  }
-
   // 2.初始化select模型数据, FD_ZERO + FD_SET 绑定要监听的fd
   FD_ZERO(&allset);
   FD_SET(listenfd, &allset);
@@ -78,6 +74,8 @@ bool test_net_select_server(/*int argc, char **argv*/) {
       perror("select error");
       continue;
     }
+
+    // 查看是否有新客户端连入
     if (FD_ISSET(listenfd, &changed_fd_set)) { // 4.判断是否有等待的事件发生
       accept_fd = accept(listenfd, (struct sockaddr *)&cliaddr, &socklen);
       if (accept_fd < 0) {
@@ -96,7 +94,7 @@ bool test_net_select_server(/*int argc, char **argv*/) {
           break;
         }
       }
-      if (i == FD_SETSIZE) {
+      if (i == FD_SETSIZE) { // 判断是否达到服务器处理的客户端连接上限(受制于fd值)
         fprintf(stderr, "too many connection, more than %d\n", FD_SETSIZE);
         close(accept_fd);
         continue;
@@ -104,11 +102,10 @@ bool test_net_select_server(/*int argc, char **argv*/) {
       if (accept_fd > maxfd)
         maxfd = accept_fd;
 
-      FD_SET(accept_fd, &allset);
-      /* if (--nready <= 0) */
-      /*     continue; */
+      FD_SET(accept_fd, &allset); // 把新连接上的客户端连接 fd 合入 总fd序列中，供每次外围for循环处理;
     }
 
+    // 循环遍历每个连接上的客户端，看是否有数据来往;
     handle_net_select_server(accept_fds, maxfd, &changed_fd_set, &allset, quit);
   }
 
@@ -126,6 +123,7 @@ void handle_net_select_server(int *p_accept_fds, int maxFds,
       continue;
     }
 
+    // 循环遍历每个fd，来检查每个fd是否有数据到达;
     if (!FD_ISSET(p_accept_fds[i], p_changed_fd_set)) {
       continue;
     }
