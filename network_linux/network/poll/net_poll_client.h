@@ -14,24 +14,12 @@
 
 void handle_net_poll_client(int connfd);
 
-bool test_net_poll_client(int argc, char **argv) {
+bool test_net_poll_client() {
   char *servInetAddr = "127.0.0.1";
   int servPort = 88960;
   char buf[MAXLINE];
   int connfd;
   struct sockaddr_in servaddr;
-
-  if (argc == 2) {
-    servInetAddr = argv[1];
-  }
-  if (argc == 3) {
-    servInetAddr = argv[1];
-    servPort = atoi(argv[2]);
-  }
-  if (argc > 3) {
-    printf("usage: echoclient <IPaddress> <Port>\n");
-    return -1;
-  }
 
   connfd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -40,12 +28,17 @@ bool test_net_poll_client(int argc, char **argv) {
   servaddr.sin_port = htons(servPort);
   inet_pton(AF_INET, servInetAddr, &servaddr.sin_addr);
 
-  if (connect(connfd, (struct sockaddr *)&servaddr, sizeof(servaddr)) < 0) {
-    perror("connect error");
-    return -1;
-  }
+  int connect_server_ret = -1;
+  do
+  {
+    sleep(1);
+    connect_server_ret = connect(connfd, (struct sockaddr *)&servaddr, sizeof(servaddr));
+    printf("connect_server_ret: %d\n", connect_server_ret);
+  } while (connect_server_ret < 0);
+
   printf("welcome to echoclient\n");
   handle_net_poll_client(connfd); /* do it all */
+
   close(connfd);
   printf("exit\n");
   exit(0);
@@ -70,11 +63,11 @@ void handle_net_poll_client(int sockfd) {
     n = write(sockfd, sendline, strlen(sendline));
     n = read(sockfd, recvline, MAXLINE);
     if (n == 0) {
-      printf("echoclient: server terminated prematurely\n");
+      printf("echo client: server terminated prematurely\n");
       break;
     }
     write(STDOUT_FILENO, recvline, n);
     //如果用标准库的缓存流输出有时会出现问题
     // fputs(recvline, stdout);
-  } while (0);
+  } while (true);
 }

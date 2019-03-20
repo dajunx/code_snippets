@@ -18,18 +18,21 @@
 #define OPEN_MAX 40960
 #endif
 
-void handle_net_poll_server(struct pollfd *clients, int maxClient, int readyClient);
+void handle_net_poll_server(struct pollfd *p_clients, int maxClient,
+                            int readyClient);
 
-bool test_net_poll_server(int argc, char **argv) {
+bool test_net_poll_server() {
   int servPort = 88960;
   int listenq = 1024;
-  int listenfd, connfd;
-  struct pollfd clients[OPEN_MAX];
-  int maxi;
+  int listenfd, connfd, maxfd;
   socklen_t socklen = sizeof(struct sockaddr_in);
   struct sockaddr_in cliaddr, servaddr;
   char buf[MAXLINE];
   int nready;
+
+  // 1.定义pollfd 结构体
+  struct pollfd clients[OPEN_MAX];
+  memset(clients, -1, sizeof(pollfd) * OPEN_MAX);
 
   bzero(&servaddr, socklen);
   servaddr.sin_family = AF_INET;
@@ -41,6 +44,7 @@ bool test_net_poll_server(int argc, char **argv) {
     perror("socket error");
   }
 
+  // 处理 address already in use. 错误
   int opt = 1;
   if (setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0) {
     perror("setsockopt error");
@@ -54,29 +58,29 @@ bool test_net_poll_server(int argc, char **argv) {
     perror("listen error");
   }
 
+  // 2.初始化pollfd 结构，定义需要监听的动作
   clients[0].fd = listenfd;
   clients[0].events = POLLIN;
-  int i;
-  for (i = 1; i < OPEN_MAX; i++)
-    clients[i].fd = -1;
-  maxi = listenfd + 1;
+  maxfd = listenfd + 1;
 
-  printf("pollechoserver startup, listen on port:%d\n", servPort);
+  printf("poll echoserver startup, listen on port:%d\n", servPort);
   printf("max connection is %d\n", OPEN_MAX);
 
   for (;;) {
-    nready = poll(clients, maxi + 1, -1);
-    // printf("nready is %d,%d\n", nready, maxi);
+    nready = poll(clients, maxfd /* + 1*/, -1); // 3.开始监听
     if (nready == -1) {
       perror("poll error");
+      continue;
     }
-    if (clients[0].revents & POLLIN) {
+
+    if (clients[0].revents & POLLIN) { // 4.查看监听返回的是否是指定的事件
       connfd = accept(listenfd, (struct sockaddr *)&cliaddr, &socklen);
       sprintf(buf, "accept form %s:%d\n", inet_ntoa(cliaddr.sin_addr),
               cliaddr.sin_port);
       printf(buf, "");
 
-      for (i = 0; i < OPEN_MAX; i++) {
+      int i = 0;
+      for (; i < OPEN_MAX; i++) {
         if (clients[i].fd == -1) {
           clients[i].fd = connfd;
           clients[i].events = POLLIN;
@@ -90,19 +94,19 @@ bool test_net_poll_server(int argc, char **argv) {
         continue;
       }
 
-      if (i > maxi)
-        maxi = i;
+      if (i > maxfd)
+        maxfd = i;
 
       /* --nready; */
     }
 
-	handle_net_poll_server(clients, maxi, nready);
+    handle_net_poll_server(clients, maxfd, nready);
   }
 
   return true;
 }
 
-void handle_net_poll_server(struct pollfd *clients, int maxClient, int nready) {
+void handle_net_poll_server(struct pollfd *p_clients, int maxClient, int nready) {
   int connfd;
   int i, nread;
   char buf[MAXLINE];
@@ -111,28 +115,27 @@ void handle_net_poll_server(struct pollfd *clients, int maxClient, int nready) {
     return;
 
   for (i = 1; i < maxClient; i++) {
-    connfd = clients[i].fd;
+    connfd = p_clients[i].fd;
     if (connfd == -1)
       continue;
-    if (clients[i].revents & (POLLIN | POLLERR)) {
+
+    if (p_clients[i].revents & (POLLIN | POLLERR)) {
       nread = read(connfd, buf, MAXLINE); //读取客户端socket流
       if (nread < 0) {
         perror("read error");
         close(connfd);
-        clients[i].fd = -1;
+        p_clients[i].fd = -1;
         continue;
       }
       if (nread == 0) {
         printf("client close the connection");
         close(connfd);
-        clients[i].fd = -1;
+        p_clients[i].fd = -1;
         continue;
       }
-      printf("read data '%s'", buf); // peterlin
 
-      // write(connfd, buf, nread);//响应客户端
-      write(connfd, "server res", nread); //响应客户端
-      if (--nready <= 0) //没有连接需要处理，退出循环
+      write(connfd, buf, nread); //响应客户端
+      if (--nready <= 0)         //没有连接需要处理，退出循环
         break;
     }
   }
