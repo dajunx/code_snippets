@@ -13,6 +13,10 @@
 #include "poll/net_poll_client.h"
 #include "poll/net_poll_server.h"
 
+// epoll
+#include "epoll/net_epoll_client.h"
+#include "epoll/net_epoll_server.h"
+
 enum {
   e_network_normal=1, 
   e_network_select,
@@ -37,6 +41,11 @@ static void *threadFuncClient(void *arg) {
   case e_network_poll:
   {
     test_net_poll_server();
+    break;
+  }
+  case e_network_epoll:
+  {
+    test_net_epoll_server();
     break;
   }
   default:
@@ -65,6 +74,11 @@ static void *threadFuncSserver(void *arg) {
     test_net_poll_client();
     break;
   }
+  case e_network_epoll:
+  {
+    test_net_epoll_client();
+    break;
+  }
   default:
     break;
   }
@@ -83,7 +97,7 @@ void main_test(int network_type) {
 }
 
 int main(int argc, char **argv) {
-  main_test(e_network_poll);
+  main_test(e_network_epoll);
 
   return 0;
 }
