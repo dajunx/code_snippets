@@ -36,7 +36,6 @@
     <Text Include="makefile" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="network\select_module_keyboard.h" />
     <ClInclude Include="network\epoll\net_epoll_client.h">
       <Filter>network\epoll</Filter>
     </ClInclude>

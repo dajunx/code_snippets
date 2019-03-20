@@ -121,7 +121,6 @@
     <ClCompile Include="network\select\net_select_web_server.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClInclude Include="network\select_module_keyboard.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="makefile" />
