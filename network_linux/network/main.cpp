@@ -97,7 +97,7 @@ void main_test(int network_type) {
 }
 
 int main(int argc, char **argv) {
-  main_test(e_network_epoll);
+  main_test(e_network_normal);
 
   return 0;
 }

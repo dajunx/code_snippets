@@ -13,11 +13,11 @@
 // typedef struct sockaddr  SA;
 void handle_net_normal_server(int connfd);
 
-bool test_net_noraml_server(/*int argc, char **argv*/) {
+bool test_net_noraml_server() {
   int listenfd, connfd;
   int serverPort = 6888;
   int listenq = 1024;
-  pid_t childpid;
+  pid_t child_pid;
   char buf[MAXLINE];
   socklen_t socklen;
 
@@ -37,7 +37,8 @@ bool test_net_noraml_server(/*int argc, char **argv*/) {
 
   // 处理 address already in use. 错误
   int enable = 1;
-  if (setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, &enable, sizeof(int)) < 0) {
+  if (setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, &enable, sizeof(int)) <
+      0) {
     perror("setsockopt(SO_REUSEADDR) failed");
     return -1;
   }
@@ -58,16 +59,17 @@ bool test_net_noraml_server(/*int argc, char **argv*/) {
       continue;
     }
 
-    sprintf(buf, "accept form %s:%d\n", inet_ntoa(cliaddr.sin_addr),
-            cliaddr.sin_port);
-    printf(buf, "");
-    childpid = fork();
-    if (childpid == 0) {                /* child process */
-      close(listenfd);                  /* close listening socket */
-      handle_net_normal_server(connfd); /* process the request */
+    printf("accept form %s:%d\n", inet_ntoa(cliaddr.sin_addr),
+           cliaddr.sin_port);
+
+    child_pid = fork();
+    if (child_pid == 0) { //child process
+      //close(listenfd); // close listening socket ??? 为啥要关闭掉
+      handle_net_normal_server(connfd);
       exit(0);
-    } else if (childpid > 0) {
-      close(connfd); /* parent closes connected socket */
+    } else if (child_pid > 0) {
+      // parent process
+      //close(connfd); // closes connected socket ??? 为啥要关闭掉
     } else {
       perror("fork error");
     }
@@ -90,12 +92,6 @@ void handle_net_normal_server(int connfd) {
     }
     if (n == 0) {
       // connfd is closed by client
-      close(connfd);
-      printf("client exit\n");
-      break;
-    }
-    // client exit
-    if (strncmp("exit", buf, 4) == 0) {
       close(connfd);
       printf("client exit\n");
       break;
