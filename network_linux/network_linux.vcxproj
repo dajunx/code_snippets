@@ -106,21 +106,9 @@
     <ClInclude Include="network\normal\net_normal_client.h" />
     <ClInclude Include="network\normal\net_normal_server.h" />
     <ClInclude Include="network\poll\net_poll_client.h" />
-    <ClCompile Include="network\poll\net_poll_keyboard.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClInclude Include="network\poll\net_poll_server.h" />
     <ClInclude Include="network\select\net_select_client.h" />
-    <ClCompile Include="network\select\net_select_keyboard.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClInclude Include="network\select\net_select_server.h" />
-    <ClCompile Include="network\select\net_select_test.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="network\select\net_select_web_server.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">true</ExcludedFromBuild>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="makefile" />
