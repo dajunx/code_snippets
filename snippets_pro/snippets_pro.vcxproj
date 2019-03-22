@@ -87,6 +87,7 @@
     <ClCompile Include="cpp_template\typedef_combine_template_err.cpp" />
     <ClCompile Include="cpp_template\typedef_typename_usage.cpp" />
     <ClCompile Include="others\getMusic163SongsCommentsInfo.cpp" />
+    <ClCompile Include="others\linux_copy_file.cpp" />
     <ClCompile Include="others\log4cplus_test.cpp" />
     <ClCompile Include="others\map_erase_element_effective.cpp" />
     <ClCompile Include="others\msg_dispatch.cpp" />

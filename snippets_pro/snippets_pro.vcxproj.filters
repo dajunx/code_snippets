@@ -102,6 +102,9 @@
     <ClCompile Include="others\log4cplus_test.cpp">
       <Filter>others</Filter>
     </ClCompile>
+    <ClCompile Include="others\linux_copy_file.cpp">
+      <Filter>others</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cplusplus_common_def.hpp">
